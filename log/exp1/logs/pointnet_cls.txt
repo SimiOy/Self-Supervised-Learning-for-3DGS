@@ -1,0 +1,892 @@
+2024-05-16 14:39:32,873 - Model - INFO - PARAMETER ...
+2024-05-16 14:39:32,873 - Model - INFO - Namespace(batch_size=24, decay_rate=0.0001, epoch=200, furthest_point_sample=True, gpu='0', learning_rate=0.001, log_dir='exp1', model='pointnet_cls', num_point=2048, optimizer='Adam', use_colors=False, use_cpu=False, use_normals=False, use_scale_and_rotation=True)
+2024-05-16 14:39:32,874 - Model - INFO - Load dataset ...
+2024-05-16 14:39:34,331 - Model - INFO - No existing model, starting training from scratch...
+2024-05-16 14:39:34,332 - Model - INFO - Start training...
+2024-05-16 14:39:34,332 - Model - INFO - Epoch 1 (1/200):
+2024-05-16 14:48:53,614 - Model - INFO - PARAMETER ...
+2024-05-16 14:48:53,614 - Model - INFO - Namespace(batch_size=24, decay_rate=0.0001, epoch=200, furthest_point_sample=True, gpu='0', learning_rate=0.001, log_dir='exp1', model='pointnet_cls', num_point=2048, optimizer='Adam', use_colors=False, use_cpu=False, use_normals=False, use_scale_and_rotation=True)
+2024-05-16 14:48:53,615 - Model - INFO - Load dataset ...
+2024-05-16 14:48:55,074 - Model - INFO - No existing model, starting training from scratch...
+2024-05-16 14:48:55,075 - Model - INFO - Start training...
+2024-05-16 14:48:55,075 - Model - INFO - Epoch 1 (1/200):
+2024-05-16 14:51:13,552 - Model - INFO - PARAMETER ...
+2024-05-16 14:51:13,552 - Model - INFO - Namespace(batch_size=24, decay_rate=0.0001, epoch=200, furthest_point_sample=True, gpu='0', learning_rate=0.001, log_dir='exp1', model='pointnet_cls', num_point=2048, optimizer='Adam', use_colors=False, use_cpu=False, use_normals=False, use_scale_and_rotation=True)
+2024-05-16 14:51:13,553 - Model - INFO - Load dataset ...
+2024-05-16 14:51:15,009 - Model - INFO - No existing model, starting training from scratch...
+2024-05-16 14:51:15,010 - Model - INFO - Start training...
+2024-05-16 14:51:15,010 - Model - INFO - Epoch 1 (1/200):
+2024-05-16 15:07:25,419 - Model - INFO - PARAMETER ...
+2024-05-16 15:07:25,419 - Model - INFO - Namespace(batch_size=24, decay_rate=0.0001, epoch=200, furthest_point_sample=True, gpu='0', learning_rate=0.001, log_dir='exp1', model='pointnet_cls', num_point=2048, optimizer='Adam', use_colors=False, use_cpu=False, use_normals=False, use_scale_and_rotation=False)
+2024-05-16 15:07:25,420 - Model - INFO - Load dataset ...
+2024-05-16 15:07:26,902 - Model - INFO - No existing model, starting training from scratch...
+2024-05-16 15:07:26,903 - Model - INFO - Start training...
+2024-05-16 15:07:26,903 - Model - INFO - Epoch 1 (1/200):
+2024-05-16 15:21:37,369 - Model - INFO - PARAMETER ...
+2024-05-16 15:21:37,369 - Model - INFO - Namespace(batch_size=12, decay_rate=0.0001, epoch=200, furthest_point_sample=True, gpu='0', learning_rate=0.001, log_dir='exp1', model='pointnet_cls', num_point=2048, optimizer='Adam', use_colors=False, use_cpu=False, use_normals=False, use_scale_and_rotation=False)
+2024-05-16 15:21:37,371 - Model - INFO - Load dataset ...
+2024-05-16 15:21:39,129 - Model - INFO - No existing model, starting training from scratch...
+2024-05-16 15:21:39,130 - Model - INFO - Start training...
+2024-05-16 15:21:39,130 - Model - INFO - Epoch 1 (1/200):
+2024-05-16 15:30:43,463 - Model - INFO - PARAMETER ...
+2024-05-16 15:30:43,463 - Model - INFO - Namespace(batch_size=12, decay_rate=0.0001, epoch=100, furthest_point_sample=True, gpu='0', learning_rate=0.001, log_dir='exp1', model='pointnet_cls', num_point=2048, optimizer='Adam', use_colors=False, use_cpu=False, use_normals=False, use_scale_and_rotation=False)
+2024-05-16 15:30:43,464 - Model - INFO - Load dataset ...
+2024-05-16 15:30:44,930 - Model - INFO - No existing model, starting training from scratch...
+2024-05-16 15:30:44,931 - Model - INFO - Start training...
+2024-05-16 15:30:44,931 - Model - INFO - Epoch 1 (1/100):
+2024-05-16 16:11:58,645 - Model - INFO - Epoch 0 Loss: 2.852354
+2024-05-16 16:11:58,652 - Model - INFO - Epoch 2 (2/100):
+2024-05-16 16:53:10,360 - Model - INFO - Epoch 1 Loss: 2.933935
+2024-05-16 16:53:10,361 - Model - INFO - Epoch 3 (3/100):
+2024-05-16 17:34:28,035 - Model - INFO - Epoch 2 Loss: 2.885330
+2024-05-16 17:34:28,037 - Model - INFO - Epoch 4 (4/100):
+2024-05-16 18:16:36,151 - Model - INFO - Epoch 3 Loss: 2.805049
+2024-05-16 18:16:36,153 - Model - INFO - Epoch 5 (5/100):
+2024-05-16 18:58:36,133 - Model - INFO - Epoch 4 Loss: 2.851384
+2024-05-16 18:58:36,135 - Model - INFO - Epoch 6 (6/100):
+2024-05-16 21:04:19,918 - Model - INFO - PARAMETER ...
+2024-05-16 21:04:19,918 - Model - INFO - Namespace(batch_size=12, decay_rate=0.0001, epoch=100, furthest_point_sample=True, gpu='0', learning_rate=0.001, log_dir='exp1', model='pointnet_cls', momentum=0.9, num_point=2048, optimizer='Adam', use_colors=False, use_cpu=False, use_normals=False, use_scale_and_rotation=False, weight_decay=0.0005)
+2024-05-16 21:04:19,919 - Model - INFO - Load dataset ...
+2024-05-16 21:04:21,749 - Model - INFO - No existing model, starting training from scratch...
+2024-05-16 21:06:06,081 - Model - INFO - PARAMETER ...
+2024-05-16 21:06:06,081 - Model - INFO - Namespace(batch_size=32, decay_rate=0.1, decay_steps=40000, epoch=100, furthest_point_sample=True, gpu='0', learning_rate=0.001, log_dir='exp1', model='pointnet_cls', momentum=0.9, num_iterations=120000, num_point=2048, optimizer='Adam', use_colors=False, use_cpu=False, use_normals=False, use_scale_and_rotation=False, weight_decay=0.0005)
+2024-05-16 21:06:06,082 - Model - INFO - Load dataset ...
+2024-05-16 21:06:07,530 - Model - INFO - No existing model, starting training from scratch...
+2024-05-16 21:06:07,531 - Model - INFO - Start training...
+2024-05-16 21:06:07,531 - Model - INFO - Epoch 1 (1/100):
+2024-05-16 21:08:37,918 - Model - INFO - PARAMETER ...
+2024-05-16 21:08:37,919 - Model - INFO - Namespace(batch_size=32, decay_rate=0.1, decay_steps=40000, epoch=100, furthest_point_sample=True, gpu='0', learning_rate=0.001, log_dir='exp1', model='pointnet_cls', momentum=0.9, num_iterations=120000, num_point=2048, optimizer='Adam', use_colors=False, use_cpu=False, use_normals=False, use_scale_and_rotation=False, weight_decay=0.0005)
+2024-05-16 21:08:37,920 - Model - INFO - Load dataset ...
+2024-05-16 21:08:39,697 - Model - INFO - No existing model, starting training from scratch...
+2024-05-16 21:08:39,698 - Model - INFO - Start training...
+2024-05-16 21:08:39,699 - Model - INFO - Epoch 1 (1/100):
+2024-05-16 21:12:38,315 - Model - INFO - PARAMETER ...
+2024-05-16 21:12:38,315 - Model - INFO - Namespace(batch_size=16, decay_rate=0.1, decay_steps=40000, epoch=100, furthest_point_sample=True, gpu='0', learning_rate=0.001, log_dir='exp1', model='pointnet_cls', momentum=0.9, num_iterations=120000, num_point=2048, optimizer='Adam', use_colors=False, use_cpu=False, use_normals=False, use_scale_and_rotation=False, weight_decay=0.0005)
+2024-05-16 21:12:38,316 - Model - INFO - Load dataset ...
+2024-05-16 21:12:39,800 - Model - INFO - No existing model, starting training from scratch...
+2024-05-16 21:12:39,802 - Model - INFO - Start training...
+2024-05-16 21:12:39,802 - Model - INFO - Epoch 1 (1/100):
+2024-05-16 21:17:41,936 - Model - INFO - PARAMETER ...
+2024-05-16 21:17:41,937 - Model - INFO - Namespace(batch_size=8, decay_rate=0.1, decay_steps=40000, epoch=100, furthest_point_sample=True, gpu='0', learning_rate=0.001, log_dir='exp1', model='pointnet_cls', momentum=0.9, num_iterations=120000, num_point=2048, optimizer='Adam', use_colors=False, use_cpu=False, use_normals=False, use_scale_and_rotation=False, weight_decay=0.0005)
+2024-05-16 21:17:41,938 - Model - INFO - Load dataset ...
+2024-05-16 21:17:43,592 - Model - INFO - No existing model, starting training from scratch...
+2024-05-16 21:17:43,593 - Model - INFO - Start training...
+2024-05-16 21:17:43,593 - Model - INFO - Epoch 1 (1/100):
+2024-05-16 21:28:54,720 - Model - INFO - Epoch 2 (2/100):
+2024-05-16 21:34:20,929 - Model - INFO - PARAMETER ...
+2024-05-16 21:34:20,929 - Model - INFO - Namespace(batch_size=8, beta=1.5, decay_rate=0.1, decay_steps=40000, epoch=100, furthest_point_sample=True, gpu='0', learning_rate=0.001, log_dir='exp1', model='pointnet_cls', momentum=0.9, num_iterations=60000, num_point=2048, optimizer='SGD', use_colors=False, use_cpu=False, use_normals=False, use_scale_and_rotation=False, weight_decay=0.0005)
+2024-05-16 21:34:20,930 - Model - INFO - Load dataset ...
+2024-05-16 21:34:22,420 - Model - INFO - No existing model, starting training from scratch...
+2024-05-16 21:34:22,421 - Model - INFO - Start training...
+2024-05-16 21:34:22,421 - Model - INFO - Epoch 1 (1/100):
+2024-05-16 21:35:07,234 - Model - INFO - Iteration 1 Loss: 3.833094
+2024-05-16 21:35:25,236 - Model - INFO - Iteration 2 Loss: 4.244457
+2024-05-16 21:35:42,841 - Model - INFO - Iteration 3 Loss: 3.392046
+2024-05-16 21:36:00,377 - Model - INFO - Iteration 4 Loss: 3.259214
+2024-05-16 21:36:17,859 - Model - INFO - Iteration 5 Loss: 3.479659
+2024-05-16 21:36:35,252 - Model - INFO - Iteration 6 Loss: 3.345395
+2024-05-16 21:36:52,715 - Model - INFO - Iteration 7 Loss: 3.488536
+2024-05-16 21:37:10,216 - Model - INFO - Iteration 8 Loss: 3.711253
+2024-05-16 21:37:27,641 - Model - INFO - Iteration 9 Loss: 3.332065
+2024-05-16 21:37:44,586 - Model - INFO - Iteration 10 Loss: 3.610415
+2024-05-16 21:38:01,531 - Model - INFO - Iteration 11 Loss: 3.244226
+2024-05-16 21:38:18,542 - Model - INFO - Iteration 12 Loss: 4.521991
+2024-05-16 21:38:35,554 - Model - INFO - Iteration 13 Loss: 3.341987
+2024-05-16 21:38:53,302 - Model - INFO - Iteration 14 Loss: 3.813125
+2024-05-16 21:39:10,808 - Model - INFO - Iteration 15 Loss: 2.949578
+2024-05-16 21:39:28,253 - Model - INFO - Iteration 16 Loss: 3.541133
+2024-05-16 21:39:45,783 - Model - INFO - Iteration 17 Loss: 3.346269
+2024-05-16 21:40:03,351 - Model - INFO - Iteration 18 Loss: 4.040570
+2024-05-16 21:40:20,912 - Model - INFO - Iteration 19 Loss: 4.175293
+2024-05-16 21:40:38,402 - Model - INFO - Iteration 20 Loss: 3.713326
+2024-05-16 21:40:55,831 - Model - INFO - Iteration 21 Loss: 3.694007
+2024-05-16 21:41:13,279 - Model - INFO - Iteration 22 Loss: 3.354739
+2024-05-16 21:41:30,767 - Model - INFO - Iteration 23 Loss: 2.896957
+2024-05-16 21:41:48,177 - Model - INFO - Iteration 24 Loss: 3.301240
+2024-05-16 21:42:05,881 - Model - INFO - Iteration 25 Loss: 3.316032
+2024-05-16 21:42:23,259 - Model - INFO - Iteration 26 Loss: 3.818177
+2024-05-16 21:42:40,737 - Model - INFO - Iteration 27 Loss: 3.284648
+2024-05-16 21:42:57,740 - Model - INFO - Iteration 28 Loss: 3.044047
+2024-05-16 21:43:15,667 - Model - INFO - Iteration 29 Loss: 3.245945
+2024-05-16 21:43:32,450 - Model - INFO - Iteration 30 Loss: 3.485635
+2024-05-16 21:43:49,567 - Model - INFO - Iteration 31 Loss: 3.508708
+2024-05-16 21:44:06,751 - Model - INFO - Iteration 32 Loss: 3.138550
+2024-05-16 21:44:24,098 - Model - INFO - Iteration 33 Loss: 3.565552
+2024-05-16 21:44:41,205 - Model - INFO - Iteration 34 Loss: 3.637256
+2024-05-16 21:44:58,097 - Model - INFO - Iteration 35 Loss: 3.154123
+2024-05-16 21:45:15,372 - Model - INFO - Iteration 36 Loss: 3.259460
+2024-05-16 21:45:32,196 - Model - INFO - Iteration 37 Loss: 3.549698
+2024-05-16 21:45:32,769 - Model - INFO - Epoch 2 (2/100):
+2024-05-16 21:46:04,948 - Model - INFO - Iteration 38 Loss: 3.259810
+2024-05-16 21:46:21,990 - Model - INFO - Iteration 39 Loss: 3.266706
+2024-05-16 21:46:38,909 - Model - INFO - Iteration 40 Loss: 3.214110
+2024-05-16 21:46:55,773 - Model - INFO - Iteration 41 Loss: 3.240943
+2024-05-16 21:47:12,775 - Model - INFO - Iteration 42 Loss: 3.166828
+2024-05-16 21:47:29,700 - Model - INFO - Iteration 43 Loss: 3.269408
+2024-05-16 21:47:46,650 - Model - INFO - Iteration 44 Loss: 3.557492
+2024-05-16 21:48:03,542 - Model - INFO - Iteration 45 Loss: 3.540331
+2024-05-16 21:48:20,513 - Model - INFO - Iteration 46 Loss: 3.127505
+2024-05-16 21:48:37,399 - Model - INFO - Iteration 47 Loss: 3.431058
+2024-05-16 21:48:54,332 - Model - INFO - Iteration 48 Loss: 3.501614
+2024-05-16 21:49:11,584 - Model - INFO - Iteration 49 Loss: 3.179276
+2024-05-16 21:49:28,714 - Model - INFO - Iteration 50 Loss: 3.307134
+2024-05-16 21:49:45,923 - Model - INFO - Iteration 51 Loss: 3.136081
+2024-05-16 21:50:03,408 - Model - INFO - Iteration 52 Loss: 3.079868
+2024-05-16 21:50:20,766 - Model - INFO - Iteration 53 Loss: 3.863588
+2024-05-16 21:50:38,070 - Model - INFO - Iteration 54 Loss: 3.227556
+2024-05-16 21:50:55,637 - Model - INFO - Iteration 55 Loss: 3.476952
+2024-05-16 21:51:13,017 - Model - INFO - Iteration 56 Loss: 3.468477
+2024-05-16 21:51:30,168 - Model - INFO - Iteration 57 Loss: 3.028848
+2024-05-16 21:51:47,711 - Model - INFO - Iteration 58 Loss: 2.983660
+2024-05-16 21:52:05,029 - Model - INFO - Iteration 59 Loss: 3.861651
+2024-05-16 21:58:25,699 - Model - INFO - PARAMETER ...
+2024-05-16 21:58:25,699 - Model - INFO - Namespace(batch_size=8, beta=1.5, decay_rate=0.1, decay_steps=40000, epoch=100, furthest_point_sample=True, gpu='0', learning_rate=0.001, log_dir='exp1', model='pointnet_cls', momentum=0.9, num_iterations=60000, num_point=2048, optimizer='SGD', use_colors=False, use_cpu=False, use_normals=False, use_scale_and_rotation=False, weight_decay=0.0005)
+2024-05-16 21:58:25,700 - Model - INFO - Load dataset ...
+2024-05-16 21:58:27,184 - Model - INFO - No existing model, starting training from scratch...
+2024-05-16 21:58:27,185 - Model - INFO - Start training...
+2024-05-16 21:58:27,185 - Model - INFO - Epoch 1 (1/100):
+2024-05-16 21:58:47,934 - Model - INFO - Iteration 1 Total Loss: 4.374710559844971, CV Loss: 0.8737797737121582, CM Loss: 2.333953857421875
+2024-05-16 21:58:48,042 - Model - INFO - Iteration 2 Total Loss: 4.048662185668945, CV Loss: 0.5725878477096558, CM Loss: 2.3173828125
+2024-05-16 21:58:48,153 - Model - INFO - Iteration 3 Total Loss: 6.617682933807373, CV Loss: 3.2009806632995605, CM Loss: 2.277801513671875
+2024-05-16 21:58:48,268 - Model - INFO - Iteration 4 Total Loss: 5.676882743835449, CV Loss: 2.400576591491699, CM Loss: 2.1842041015625
+2024-05-16 21:58:48,390 - Model - INFO - Iteration 5 Total Loss: 4.0775299072265625, CV Loss: 0.9847756028175354, CM Loss: 2.0618362426757812
+2024-05-16 21:58:48,485 - Model - INFO - Iteration 6 Total Loss: 3.7521543502807617, CV Loss: 0.5626858472824097, CM Loss: 2.126312255859375
+2024-05-16 21:58:48,575 - Model - INFO - Iteration 7 Total Loss: 5.255640029907227, CV Loss: 2.2325916290283203, CM Loss: 2.0153656005859375
+2024-05-16 21:58:48,678 - Model - INFO - Iteration 8 Total Loss: 4.426976680755615, CV Loss: 1.385938048362732, CM Loss: 2.0273590087890625
+2024-05-16 21:58:51,801 - Model - INFO - Iteration 9 Total Loss: 4.1071672439575195, CV Loss: 1.0931596755981445, CM Loss: 2.00933837890625
+2024-05-16 21:58:53,012 - Model - INFO - Iteration 10 Total Loss: 3.9226725101470947, CV Loss: 0.767307460308075, CM Loss: 2.10357666015625
+2024-05-16 21:58:53,130 - Model - INFO - Iteration 11 Total Loss: 4.564265251159668, CV Loss: 1.670328974723816, CM Loss: 1.929290771484375
+2024-05-16 21:58:53,228 - Model - INFO - Iteration 12 Total Loss: 4.138185501098633, CV Loss: 1.0876481533050537, CM Loss: 2.03369140625
+2024-05-16 21:58:56,400 - Model - INFO - Iteration 13 Total Loss: 3.2128994464874268, CV Loss: 0.24073153734207153, CM Loss: 1.9814453125
+2024-05-16 21:58:57,750 - Model - INFO - Iteration 14 Total Loss: 5.425683498382568, CV Loss: 2.5205092430114746, CM Loss: 1.9367828369140625
+2024-05-16 21:58:58,765 - Model - INFO - Iteration 15 Total Loss: 4.042876243591309, CV Loss: 1.1297595500946045, CM Loss: 1.94207763671875
+2024-05-16 21:58:58,869 - Model - INFO - Iteration 16 Total Loss: 3.371250629425049, CV Loss: 0.3967939615249634, CM Loss: 1.98297119140625
+2024-05-16 21:59:00,968 - Model - INFO - Iteration 17 Total Loss: 3.466449737548828, CV Loss: 0.5699501037597656, CM Loss: 1.930999755859375
+2024-05-16 21:59:03,241 - Model - INFO - Iteration 18 Total Loss: 5.056816101074219, CV Loss: 2.120147705078125, CM Loss: 1.9577789306640625
+2024-05-16 21:59:03,599 - Model - INFO - Iteration 19 Total Loss: 4.3250555992126465, CV Loss: 1.420270323753357, CM Loss: 1.9365234375
+2024-05-16 21:59:03,704 - Model - INFO - Iteration 20 Total Loss: 4.1028571128845215, CV Loss: 1.154538631439209, CM Loss: 1.965545654296875
+2024-05-16 21:59:05,489 - Model - INFO - Iteration 21 Total Loss: 3.9426581859588623, CV Loss: 1.0546729564666748, CM Loss: 1.925323486328125
+2024-05-16 21:59:08,049 - Model - INFO - Iteration 22 Total Loss: 4.043128490447998, CV Loss: 1.1594003438949585, CM Loss: 1.9224853515625
+2024-05-16 21:59:08,466 - Model - INFO - Iteration 23 Total Loss: 3.0325815677642822, CV Loss: 0.09172463417053223, CM Loss: 1.9605712890625
+2024-05-16 21:59:08,576 - Model - INFO - Iteration 24 Total Loss: 3.4518117904663086, CV Loss: 0.5493613481521606, CM Loss: 1.934967041015625
+2024-05-16 21:59:11,414 - Model - INFO - Iteration 25 Total Loss: 3.0216305255889893, CV Loss: 0.14083224534988403, CM Loss: 1.9205322265625
+2024-05-16 22:00:22,152 - Model - INFO - PARAMETER ...
+2024-05-16 22:00:22,152 - Model - INFO - Namespace(batch_size=32, beta=1.5, decay_rate=0.1, decay_steps=40000, epoch=100, furthest_point_sample=True, gpu='0', learning_rate=0.001, log_dir='exp1', model='pointnet_cls', momentum=0.9, num_iterations=60000, num_point=2048, optimizer='SGD', use_colors=False, use_cpu=False, use_normals=False, use_scale_and_rotation=False, weight_decay=0.0005)
+2024-05-16 22:00:22,152 - Model - INFO - Load dataset ...
+2024-05-16 22:00:23,593 - Model - INFO - No existing model, starting training from scratch...
+2024-05-16 22:00:23,594 - Model - INFO - Start training...
+2024-05-16 22:00:23,594 - Model - INFO - Epoch 1 (1/100):
+2024-05-16 22:01:34,223 - Model - INFO - Epoch 2 (2/100):
+2024-05-16 22:02:44,190 - Model - INFO - Epoch 3 (3/100):
+2024-05-16 22:03:49,804 - Model - INFO - Epoch 4 (4/100):
+2024-05-16 22:04:57,172 - Model - INFO - Epoch 5 (5/100):
+2024-05-16 22:07:51,981 - Model - INFO - PARAMETER ...
+2024-05-16 22:07:51,981 - Model - INFO - Namespace(batch_size=32, beta=1.5, decay_rate=0.1, decay_steps=40000, epoch=100, furthest_point_sample=True, gpu='0', learning_rate=0.001, log_dir='exp1', model='pointnet_cls', momentum=0.9, num_iterations=60000, num_point=2048, optimizer='SGD', use_colors=False, use_cpu=False, use_normals=False, use_scale_and_rotation=False, weight_decay=0.0005)
+2024-05-16 22:07:51,981 - Model - INFO - Load dataset ...
+2024-05-16 22:07:53,429 - Model - INFO - No existing model, starting training from scratch...
+2024-05-16 22:07:53,429 - Model - INFO - Start training...
+2024-05-16 22:07:53,429 - Model - INFO - Epoch 1 (1/100):
+2024-05-16 22:08:59,140 - Model - INFO - PARAMETER ...
+2024-05-16 22:08:59,141 - Model - INFO - Namespace(batch_size=32, beta=1.5, decay_rate=0.1, decay_steps=40000, epoch=100, furthest_point_sample=True, gpu='0', learning_rate=0.001, log_dir='exp1', model='pointnet_cls', momentum=0.9, num_iterations=60000, num_point=2048, optimizer='SGD', use_colors=False, use_cpu=False, use_normals=False, use_scale_and_rotation=False, weight_decay=0.0005)
+2024-05-16 22:08:59,143 - Model - INFO - Load dataset ...
+2024-05-16 22:09:00,614 - Model - INFO - No existing model, starting training from scratch...
+2024-05-16 22:09:00,615 - Model - INFO - Start training...
+2024-05-16 22:09:00,615 - Model - INFO - Epoch 1 (1/100):
+2024-05-16 22:10:13,164 - Model - INFO - Epoch 1 Total Loss: 4.40687370300293, CV Loss: 1.5261553525924683, CM Loss: 1.9204788208007812
+2024-05-16 22:10:13,165 - Model - INFO - Epoch 2 (2/100):
+2024-05-16 22:11:21,436 - Model - INFO - Epoch 2 Total Loss: 4.096834182739258, CV Loss: 1.2328474521636963, CM Loss: 1.9093246459960938
+2024-05-16 22:11:21,436 - Model - INFO - Epoch 3 (3/100):
+2024-05-16 22:12:29,998 - Model - INFO - Epoch 3 Total Loss: 3.7143330574035645, CV Loss: 0.839474081993103, CM Loss: 1.9165725708007812
+2024-05-16 22:12:29,998 - Model - INFO - Epoch 4 (4/100):
+2024-05-16 22:13:47,127 - Model - INFO - Epoch 4 Total Loss: 3.914398193359375, CV Loss: 1.0284957885742188, CM Loss: 1.9239349365234375
+2024-05-16 22:13:47,128 - Model - INFO - Epoch 5 (5/100):
+2024-05-16 22:15:02,405 - Model - INFO - Epoch 5 Total Loss: 3.882188320159912, CV Loss: 1.009000301361084, CM Loss: 1.9154586791992188
+2024-05-16 22:15:02,406 - Model - INFO - Epoch 6 (6/100):
+2024-05-16 22:16:17,058 - Model - INFO - Epoch 6 Total Loss: 3.9308042526245117, CV Loss: 1.0484951734542847, CM Loss: 1.921539306640625
+2024-05-16 22:16:17,059 - Model - INFO - Epoch 7 (7/100):
+2024-05-16 22:17:27,128 - Model - INFO - Epoch 7 Total Loss: 3.3119888305664062, CV Loss: 0.4471892714500427, CM Loss: 1.9098663330078125
+2024-05-16 22:17:27,128 - Model - INFO - Epoch 8 (8/100):
+2024-05-16 22:18:45,512 - Model - INFO - Epoch 8 Total Loss: 3.5211315155029297, CV Loss: 0.6493854522705078, CM Loss: 1.9144973754882812
+2024-05-16 22:18:45,512 - Model - INFO - Epoch 9 (9/100):
+2024-05-16 22:19:59,604 - Model - INFO - Epoch 9 Total Loss: 3.960928440093994, CV Loss: 1.0866988897323608, CM Loss: 1.9161529541015625
+2024-05-16 22:19:59,604 - Model - INFO - Epoch 10 (10/100):
+2024-05-16 22:21:11,581 - Model - INFO - Epoch 10 Total Loss: 3.7791354656219482, CV Loss: 0.9128252863883972, CM Loss: 1.9108734130859375
+2024-05-16 22:21:11,581 - Model - INFO - Epoch 11 (11/100):
+2024-05-16 22:22:36,950 - Model - INFO - Epoch 11 Total Loss: 3.6532323360443115, CV Loss: 0.7836720943450928, CM Loss: 1.9130401611328125
+2024-05-16 22:22:36,951 - Model - INFO - Epoch 12 (12/100):
+2024-05-16 22:23:50,513 - Model - INFO - Epoch 12 Total Loss: 3.6801533699035645, CV Loss: 0.8357127904891968, CM Loss: 1.8962936401367188
+2024-05-16 22:23:50,514 - Model - INFO - Epoch 13 (13/100):
+2024-05-16 22:25:01,956 - Model - INFO - Epoch 13 Total Loss: 3.9335243701934814, CV Loss: 1.0799400806427002, CM Loss: 1.9023895263671875
+2024-05-16 22:25:01,956 - Model - INFO - Epoch 14 (14/100):
+2024-05-16 22:26:18,721 - Model - INFO - Epoch 14 Total Loss: 3.8517701625823975, CV Loss: 1.006620168685913, CM Loss: 1.8967666625976562
+2024-05-16 22:26:18,722 - Model - INFO - Epoch 15 (15/100):
+2024-05-16 22:27:30,837 - Model - INFO - Epoch 15 Total Loss: 3.4656286239624023, CV Loss: 0.5977163910865784, CM Loss: 1.9119415283203125
+2024-05-16 22:27:30,837 - Model - INFO - Epoch 16 (16/100):
+2024-05-16 22:27:57,383 - Model - INFO - PARAMETER ...
+2024-05-16 22:27:57,384 - Model - INFO - Namespace(batch_size=32, beta=2.0, decay_rate=0.1, decay_steps=40000, epoch=100, furthest_point_sample=True, gpu='0', learning_rate=0.0001, log_dir='exp1', model='pointnet_cls', momentum=0.9, num_iterations=60000, num_point=2048, num_workers=8, optimizer='SGD', use_colors=False, use_cpu=False, use_normals=False, use_scale_and_rotation=False, weight_decay=0.0005)
+2024-05-16 22:27:57,385 - Model - INFO - Load dataset ...
+2024-05-16 22:27:58,904 - Model - INFO - No existing model, starting training from scratch...
+2024-05-16 22:27:58,905 - Model - INFO - Start training...
+2024-05-16 22:27:58,905 - Model - INFO - Epoch 1 (1/100):
+2024-05-16 22:36:18,369 - Model - INFO - PARAMETER ...
+2024-05-16 22:36:18,370 - Model - INFO - Namespace(batch_size=32, beta=2.0, decay_rate=0.1, decay_steps=40000, epoch=100, furthest_point_sample=True, gpu='0', learning_rate=0.0001, log_dir='exp1', model='pointnet_cls', momentum=0.9, num_iterations=60000, num_point=2048, num_workers=8, optimizer='SGD', use_colors=False, use_cpu=False, use_normals=False, use_scale_and_rotation=False, weight_decay=0.0005)
+2024-05-16 22:36:18,371 - Model - INFO - Load dataset ...
+2024-05-16 22:36:18,673 - Model - INFO - No existing model, starting training from scratch...
+2024-05-16 22:36:18,674 - Model - INFO - Start training...
+2024-05-16 22:36:18,674 - Model - INFO - Epoch 1 (1/100):
+2024-05-16 22:37:53,497 - Model - INFO - Epoch 1 Total Loss: 6.070460319519043, CV Loss: 2.106494188308716, CM Loss: 1.9819831848144531
+2024-05-16 22:37:53,497 - Model - INFO - Epoch 2 (2/100):
+2024-05-16 22:39:16,419 - Model - INFO - Epoch 2 Total Loss: 5.463006973266602, CV Loss: 1.5828497409820557, CM Loss: 1.9400787353515625
+2024-05-16 22:39:16,420 - Model - INFO - Epoch 3 (3/100):
+2024-05-16 22:40:38,614 - Model - INFO - Epoch 3 Total Loss: 4.959941864013672, CV Loss: 1.1246910095214844, CM Loss: 1.9176254272460938
+2024-05-16 22:40:38,615 - Model - INFO - Epoch 4 (4/100):
+2024-05-16 22:41:59,780 - Model - INFO - Epoch 4 Total Loss: 5.18918514251709, CV Loss: 1.3501043319702148, CM Loss: 1.9195404052734375
+2024-05-16 22:41:59,780 - Model - INFO - Epoch 5 (5/100):
+2024-05-16 22:43:22,394 - Model - INFO - Epoch 5 Total Loss: 4.6622748374938965, CV Loss: 0.823255181312561, CM Loss: 1.9195098876953125
+2024-05-16 22:43:22,394 - Model - INFO - Epoch 6 (6/100):
+2024-05-16 22:44:43,818 - Model - INFO - Epoch 6 Total Loss: 5.2027411460876465, CV Loss: 1.367307186126709, CM Loss: 1.9177169799804688
+2024-05-16 22:44:43,818 - Model - INFO - Epoch 7 (7/100):
+2024-05-16 22:46:12,669 - Model - INFO - Epoch 7 Total Loss: 5.34758186340332, CV Loss: 1.5283524990081787, CM Loss: 1.9096145629882812
+2024-05-16 22:46:12,669 - Model - INFO - Epoch 8 (8/100):
+2024-05-16 22:47:36,908 - Model - INFO - Epoch 8 Total Loss: 5.072434425354004, CV Loss: 1.2448740005493164, CM Loss: 1.9137802124023438
+2024-05-16 22:47:36,908 - Model - INFO - Epoch 9 (9/100):
+2024-05-16 22:49:00,431 - Model - INFO - Epoch 9 Total Loss: 5.3138322830200195, CV Loss: 1.472981333732605, CM Loss: 1.9204254150390625
+2024-05-16 22:49:00,432 - Model - INFO - Epoch 10 (10/100):
+2024-05-16 22:50:24,019 - Model - INFO - Epoch 10 Total Loss: 4.633639812469482, CV Loss: 0.8063540458679199, CM Loss: 1.9136428833007812
+2024-05-16 22:50:24,019 - Model - INFO - Epoch 11 (11/100):
+2024-05-16 22:51:47,573 - Model - INFO - Epoch 11 Total Loss: 4.34876823425293, CV Loss: 0.5164315700531006, CM Loss: 1.916168212890625
+2024-05-16 22:51:47,573 - Model - INFO - Epoch 12 (12/100):
+2024-05-17 10:21:20,154 - Model - INFO - PARAMETER ...
+2024-05-17 10:21:20,155 - Model - INFO - Namespace(batch_size=32, beta=2.0, decay_rate=0.1, decay_steps=40000, epoch=100, furthest_point_sample=False, gpu='0', learning_rate=0.0001, log_dir='exp1', model='pointnet_cls', momentum=0.9, num_iterations=60000, num_point=2048, num_workers=8, optimizer='SGD', use_colors=False, use_cpu=False, use_normals=False, use_scale_and_rotation=False, weight_decay=0.0005)
+2024-05-17 10:21:20,157 - Model - INFO - Load dataset ...
+2024-05-17 10:21:21,641 - Model - INFO - No existing model, starting training from scratch...
+2024-05-17 10:21:21,642 - Model - INFO - Start training...
+2024-05-17 10:21:21,643 - Model - INFO - Epoch 1 (1/100):
+2024-05-17 10:22:00,853 - Model - INFO - Epoch 1 Total Loss: 5.100889205932617, CV Loss: 1.2176839113235474, CM Loss: 1.9416027069091797
+2024-05-17 10:27:01,147 - Model - INFO - PARAMETER ...
+2024-05-17 10:27:01,147 - Model - INFO - Namespace(batch_size=32, beta=2.0, decay_rate=0.1, decay_steps=40000, epoch=100, furthest_point_sample=False, gpu='0', learning_rate=0.0001, log_dir='exp1', model='pointnet_cls', momentum=0.9, num_iterations=60000, num_point=2048, num_workers=8, optimizer='SGD', use_colors=False, use_cpu=False, use_normals=False, use_scale_and_rotation=False, weight_decay=0.0005)
+2024-05-17 10:27:01,149 - Model - INFO - Load dataset ...
+2024-05-17 10:27:02,623 - Model - INFO - No existing model, starting training from scratch...
+2024-05-17 10:27:02,624 - Model - INFO - Start training...
+2024-05-17 10:27:02,624 - Model - INFO - Epoch 1 (1/100):
+2024-05-17 10:27:42,825 - Model - INFO - Epoch 1 Total Loss: 5.394845485687256, CV Loss: 1.3476043939590454, CM Loss: 2.02362060546875
+2024-05-17 10:28:06,964 - Model - INFO - Epoch 1 CM Accuracy: 0.53
+2024-05-17 10:28:06,964 - Model - INFO - Epoch 1 CV Mean Pair Distance: Positive Pairs: 1.328066110610962, Negative Pairs: 1.6650443077087402
+2024-05-17 10:28:06,965 - Model - INFO - Epoch 2 (2/100):
+2024-05-17 10:28:39,848 - Model - INFO - Epoch 2 Total Loss: 5.38797664642334, CV Loss: 1.5549230575561523, CM Loss: 1.9165267944335938
+2024-05-17 10:29:03,817 - Model - INFO - Epoch 2 CM Accuracy: 0.59
+2024-05-17 10:29:03,818 - Model - INFO - Epoch 2 CV Mean Pair Distance: Positive Pairs: 2.61872935295105, Negative Pairs: 3.419807195663452
+2024-05-17 10:29:03,819 - Model - INFO - Epoch 3 (3/100):
+2024-05-17 10:29:36,889 - Model - INFO - Epoch 3 Total Loss: 5.154322147369385, CV Loss: 1.2914832830429077, CM Loss: 1.9314193725585938
+2024-05-17 10:30:00,991 - Model - INFO - Epoch 3 CM Accuracy: 0.58
+2024-05-17 10:30:00,992 - Model - INFO - Epoch 3 CV Mean Pair Distance: Positive Pairs: 3.9948177337646484, Negative Pairs: 4.5411529541015625
+2024-05-17 10:30:00,993 - Model - INFO - Epoch 4 (4/100):
+2024-05-17 10:30:34,062 - Model - INFO - Epoch 4 Total Loss: 5.041103363037109, CV Loss: 1.1723440885543823, CM Loss: 1.9343795776367188
+2024-05-17 10:30:58,195 - Model - INFO - Epoch 4 CM Accuracy: 0.62
+2024-05-17 10:30:58,196 - Model - INFO - Epoch 4 CV Mean Pair Distance: Positive Pairs: 4.324194431304932, Negative Pairs: 5.4180707931518555
+2024-05-17 10:30:58,197 - Model - INFO - Epoch 5 (5/100):
+2024-05-17 10:31:31,476 - Model - INFO - Epoch 5 Total Loss: 5.035584926605225, CV Loss: 1.222886562347412, CM Loss: 1.9063491821289062
+2024-05-17 10:31:55,737 - Model - INFO - Epoch 5 CM Accuracy: 0.61
+2024-05-17 10:31:55,737 - Model - INFO - Epoch 5 CV Mean Pair Distance: Positive Pairs: 4.179745674133301, Negative Pairs: 5.365551948547363
+2024-05-17 10:31:55,739 - Model - INFO - Epoch 6 (6/100):
+2024-05-17 10:32:29,116 - Model - INFO - Epoch 6 Total Loss: 4.950525283813477, CV Loss: 1.138345718383789, CM Loss: 1.9060897827148438
+2024-05-17 10:32:53,150 - Model - INFO - Epoch 6 CM Accuracy: 0.55
+2024-05-17 10:32:53,151 - Model - INFO - Epoch 6 CV Mean Pair Distance: Positive Pairs: 4.132311820983887, Negative Pairs: 5.125089645385742
+2024-05-17 10:32:53,152 - Model - INFO - Epoch 7 (7/100):
+2024-05-17 10:33:25,892 - Model - INFO - Epoch 7 Total Loss: 5.422636985778809, CV Loss: 1.5909721851348877, CM Loss: 1.91583251953125
+2024-05-17 10:33:49,935 - Model - INFO - Epoch 7 CM Accuracy: 0.48
+2024-05-17 10:33:49,936 - Model - INFO - Epoch 7 CV Mean Pair Distance: Positive Pairs: 4.220458984375, Negative Pairs: 4.730611801147461
+2024-05-17 10:33:49,937 - Model - INFO - Epoch 8 (8/100):
+2024-05-17 10:34:22,910 - Model - INFO - Epoch 8 Total Loss: 5.523246765136719, CV Loss: 1.6735608577728271, CM Loss: 1.9248428344726562
+2024-05-17 10:34:47,084 - Model - INFO - Epoch 8 CM Accuracy: 0.63
+2024-05-17 10:34:47,084 - Model - INFO - Epoch 8 CV Mean Pair Distance: Positive Pairs: 4.42928409576416, Negative Pairs: 5.387709140777588
+2024-05-17 10:34:47,085 - Model - INFO - Epoch 9 (9/100):
+2024-05-17 10:35:20,626 - Model - INFO - Epoch 9 Total Loss: 4.8097333908081055, CV Loss: 0.9961041808128357, CM Loss: 1.9068145751953125
+2024-05-17 10:35:44,877 - Model - INFO - Epoch 9 CM Accuracy: 0.5
+2024-05-17 10:35:44,878 - Model - INFO - Epoch 9 CV Mean Pair Distance: Positive Pairs: 4.196640491485596, Negative Pairs: 5.308701038360596
+2024-05-17 10:35:44,879 - Model - INFO - Epoch 10 (10/100):
+2024-05-17 10:36:18,073 - Model - INFO - Epoch 10 Total Loss: 5.6165080070495605, CV Loss: 1.790442943572998, CM Loss: 1.9130325317382812
+2024-05-17 10:36:42,103 - Model - INFO - Epoch 10 CM Accuracy: 0.56
+2024-05-17 10:36:42,104 - Model - INFO - Epoch 10 CV Mean Pair Distance: Positive Pairs: 3.9841785430908203, Negative Pairs: 4.819560527801514
+2024-05-17 10:36:42,104 - Model - INFO - Epoch 11 (11/100):
+2024-05-17 10:37:15,032 - Model - INFO - Epoch 11 Total Loss: 4.796057224273682, CV Loss: 0.9777740836143494, CM Loss: 1.9091415405273438
+2024-05-17 10:37:38,832 - Model - INFO - Epoch 11 CM Accuracy: 0.48
+2024-05-17 10:37:38,832 - Model - INFO - Epoch 11 CV Mean Pair Distance: Positive Pairs: 4.273932456970215, Negative Pairs: 4.95736837387085
+2024-05-17 10:37:38,833 - Model - INFO - Epoch 12 (12/100):
+2024-05-17 10:38:11,859 - Model - INFO - Epoch 12 Total Loss: 4.655742168426514, CV Loss: 0.839473307132721, CM Loss: 1.9081344604492188
+2024-05-17 10:38:36,029 - Model - INFO - Epoch 12 CM Accuracy: 0.53
+2024-05-17 10:38:36,029 - Model - INFO - Epoch 12 CV Mean Pair Distance: Positive Pairs: 3.9739255905151367, Negative Pairs: 4.572503089904785
+2024-05-17 10:38:36,030 - Model - INFO - Epoch 13 (13/100):
+2024-05-17 10:39:08,894 - Model - INFO - Epoch 13 Total Loss: 4.722819805145264, CV Loss: 0.9035602807998657, CM Loss: 1.9096298217773438
+2024-05-17 10:39:32,848 - Model - INFO - Epoch 13 CM Accuracy: 0.66
+2024-05-17 10:39:32,849 - Model - INFO - Epoch 13 CV Mean Pair Distance: Positive Pairs: 3.9348342418670654, Negative Pairs: 4.490269184112549
+2024-05-17 10:39:32,850 - Model - INFO - Epoch 14 (14/100):
+2024-05-17 10:40:06,169 - Model - INFO - Epoch 14 Total Loss: 5.0300798416137695, CV Loss: 1.213688850402832, CM Loss: 1.9081954956054688
+2024-05-17 10:40:30,182 - Model - INFO - Epoch 14 CM Accuracy: 0.53
+2024-05-17 10:40:30,182 - Model - INFO - Epoch 14 CV Mean Pair Distance: Positive Pairs: 4.1016645431518555, Negative Pairs: 4.679063320159912
+2024-05-17 10:40:30,183 - Model - INFO - Epoch 15 (15/100):
+2024-05-17 10:41:03,119 - Model - INFO - Epoch 15 Total Loss: 4.866181373596191, CV Loss: 1.0499275922775269, CM Loss: 1.9081268310546875
+2024-05-17 10:41:27,141 - Model - INFO - Epoch 15 CM Accuracy: 0.63
+2024-05-17 10:41:27,141 - Model - INFO - Epoch 15 CV Mean Pair Distance: Positive Pairs: 4.172389507293701, Negative Pairs: 4.679157733917236
+2024-05-17 10:41:27,142 - Model - INFO - Epoch 16 (16/100):
+2024-05-17 10:42:00,418 - Model - INFO - Epoch 16 Total Loss: 4.6862616539001465, CV Loss: 0.8687569499015808, CM Loss: 1.90875244140625
+2024-05-17 10:42:24,369 - Model - INFO - Epoch 16 CM Accuracy: 0.54
+2024-05-17 10:42:24,369 - Model - INFO - Epoch 16 CV Mean Pair Distance: Positive Pairs: 4.136410713195801, Negative Pairs: 4.696018218994141
+2024-05-17 10:42:24,370 - Model - INFO - Epoch 17 (17/100):
+2024-05-17 10:42:57,229 - Model - INFO - Epoch 17 Total Loss: 4.4913177490234375, CV Loss: 0.6876371502876282, CM Loss: 1.9018402099609375
+2024-05-17 10:43:20,939 - Model - INFO - Epoch 17 CM Accuracy: 0.54
+2024-05-17 10:43:20,939 - Model - INFO - Epoch 17 CV Mean Pair Distance: Positive Pairs: 4.145163536071777, Negative Pairs: 4.780457019805908
+2024-05-17 10:43:20,940 - Model - INFO - Epoch 18 (18/100):
+2024-05-17 10:43:53,938 - Model - INFO - Epoch 18 Total Loss: 4.624677658081055, CV Loss: 0.8198983669281006, CM Loss: 1.9023895263671875
+2024-05-17 10:44:17,675 - Model - INFO - Epoch 18 CM Accuracy: 0.58
+2024-05-17 10:44:17,676 - Model - INFO - Epoch 18 CV Mean Pair Distance: Positive Pairs: 4.217531681060791, Negative Pairs: 5.103557586669922
+2024-05-17 10:44:17,677 - Model - INFO - Epoch 19 (19/100):
+2024-05-17 10:44:50,650 - Model - INFO - Epoch 19 Total Loss: 4.706429481506348, CV Loss: 0.8885276317596436, CM Loss: 1.9089508056640625
+2024-05-17 10:45:15,076 - Model - INFO - Epoch 19 CM Accuracy: 0.52
+2024-05-17 10:45:15,076 - Model - INFO - Epoch 19 CV Mean Pair Distance: Positive Pairs: 3.9718968868255615, Negative Pairs: 4.380579471588135
+2024-05-17 10:45:15,077 - Model - INFO - Epoch 20 (20/100):
+2024-05-17 10:45:47,816 - Model - INFO - Epoch 20 Total Loss: 4.87033748626709, CV Loss: 1.046988606452942, CM Loss: 1.9116744995117188
+2024-05-17 10:46:11,684 - Model - INFO - Epoch 20 CM Accuracy: 0.66
+2024-05-17 10:46:11,684 - Model - INFO - Epoch 20 CV Mean Pair Distance: Positive Pairs: 4.018154621124268, Negative Pairs: 4.627892017364502
+2024-05-17 10:46:11,685 - Model - INFO - Epoch 21 (21/100):
+2024-05-17 10:46:44,649 - Model - INFO - Epoch 21 Total Loss: 4.522767543792725, CV Loss: 0.6993268132209778, CM Loss: 1.9117202758789062
+2024-05-17 10:47:08,429 - Model - INFO - Epoch 21 CM Accuracy: 0.61
+2024-05-17 10:47:08,430 - Model - INFO - Epoch 21 CV Mean Pair Distance: Positive Pairs: 3.980228900909424, Negative Pairs: 4.4528489112854
+2024-05-17 10:47:08,431 - Model - INFO - Epoch 22 (22/100):
+2024-05-17 10:47:41,487 - Model - INFO - Epoch 22 Total Loss: 4.718133926391602, CV Loss: 0.918893575668335, CM Loss: 1.8996200561523438
+2024-05-17 10:48:05,218 - Model - INFO - Epoch 22 CM Accuracy: 0.58
+2024-05-17 10:48:05,218 - Model - INFO - Epoch 22 CV Mean Pair Distance: Positive Pairs: 3.9502334594726562, Negative Pairs: 4.693869113922119
+2024-05-17 10:48:05,219 - Model - INFO - Epoch 23 (23/100):
+2024-05-17 10:48:38,010 - Model - INFO - Epoch 23 Total Loss: 4.8381195068359375, CV Loss: 1.0019835233688354, CM Loss: 1.9180679321289062
+2024-05-17 10:49:01,820 - Model - INFO - Epoch 23 CM Accuracy: 0.63
+2024-05-17 10:49:01,820 - Model - INFO - Epoch 23 CV Mean Pair Distance: Positive Pairs: 4.005439281463623, Negative Pairs: 4.69973087310791
+2024-05-17 10:49:01,821 - Model - INFO - Epoch 24 (24/100):
+2024-05-17 10:49:34,554 - Model - INFO - Epoch 24 Total Loss: 4.5501508712768555, CV Loss: 0.7277785539627075, CM Loss: 1.9111862182617188
+2024-05-17 10:49:58,415 - Model - INFO - Epoch 24 CM Accuracy: 0.59
+2024-05-17 10:49:58,415 - Model - INFO - Epoch 24 CV Mean Pair Distance: Positive Pairs: 3.8596346378326416, Negative Pairs: 4.499619007110596
+2024-05-17 10:49:58,417 - Model - INFO - Epoch 25 (25/100):
+2024-05-17 10:50:31,661 - Model - INFO - Epoch 25 Total Loss: 4.640380859375, CV Loss: 0.8237304091453552, CM Loss: 1.9083251953125
+2024-05-17 10:50:55,596 - Model - INFO - Epoch 25 CM Accuracy: 0.61
+2024-05-17 10:50:55,596 - Model - INFO - Epoch 25 CV Mean Pair Distance: Positive Pairs: 4.0814032554626465, Negative Pairs: 4.514146327972412
+2024-05-17 10:50:55,597 - Model - INFO - Epoch 26 (26/100):
+2024-05-17 10:51:28,635 - Model - INFO - Epoch 26 Total Loss: 4.673675537109375, CV Loss: 0.8569486141204834, CM Loss: 1.9083633422851562
+2024-05-17 10:51:52,555 - Model - INFO - Epoch 26 CM Accuracy: 0.58
+2024-05-17 10:51:52,555 - Model - INFO - Epoch 26 CV Mean Pair Distance: Positive Pairs: 3.907661199569702, Negative Pairs: 4.6028242111206055
+2024-05-17 10:51:52,556 - Model - INFO - Epoch 27 (27/100):
+2024-05-17 10:52:25,228 - Model - INFO - Epoch 27 Total Loss: 4.837329864501953, CV Loss: 1.0249977111816406, CM Loss: 1.9061660766601562
+2024-05-17 10:52:49,167 - Model - INFO - Epoch 27 CM Accuracy: 0.53
+2024-05-17 10:52:49,168 - Model - INFO - Epoch 27 CV Mean Pair Distance: Positive Pairs: 4.131592273712158, Negative Pairs: 4.767614364624023
+2024-05-17 10:52:49,169 - Model - INFO - Epoch 28 (28/100):
+2024-05-17 10:53:22,654 - Model - INFO - Epoch 28 Total Loss: 4.563697814941406, CV Loss: 0.7546919584274292, CM Loss: 1.9045028686523438
+2024-05-17 10:53:46,517 - Model - INFO - Epoch 28 CM Accuracy: 0.57
+2024-05-17 10:53:46,517 - Model - INFO - Epoch 28 CV Mean Pair Distance: Positive Pairs: 3.9468467235565186, Negative Pairs: 4.707557201385498
+2024-05-17 10:53:46,518 - Model - INFO - Epoch 29 (29/100):
+2024-05-17 10:54:19,290 - Model - INFO - Epoch 29 Total Loss: 4.737450122833252, CV Loss: 0.8980183005332947, CM Loss: 1.9197158813476562
+2024-05-17 10:54:43,284 - Model - INFO - Epoch 29 CM Accuracy: 0.56
+2024-05-17 10:54:43,285 - Model - INFO - Epoch 29 CV Mean Pair Distance: Positive Pairs: 3.9726107120513916, Negative Pairs: 4.578596115112305
+2024-05-17 10:54:43,286 - Model - INFO - Epoch 30 (30/100):
+2024-05-17 10:55:16,945 - Model - INFO - Epoch 30 Total Loss: 4.818918228149414, CV Loss: 0.999582052230835, CM Loss: 1.90966796875
+2024-05-17 10:55:40,902 - Model - INFO - Epoch 30 CM Accuracy: 0.51
+2024-05-17 10:55:40,903 - Model - INFO - Epoch 30 CV Mean Pair Distance: Positive Pairs: 3.988574743270874, Negative Pairs: 4.585538864135742
+2024-05-17 10:55:40,904 - Model - INFO - Epoch 31 (31/100):
+2024-05-17 10:56:13,563 - Model - INFO - Epoch 31 Total Loss: 4.459002494812012, CV Loss: 0.6422297954559326, CM Loss: 1.90838623046875
+2024-05-17 10:56:37,877 - Model - INFO - Epoch 31 CM Accuracy: 0.6
+2024-05-17 10:56:37,877 - Model - INFO - Epoch 31 CV Mean Pair Distance: Positive Pairs: 4.052605152130127, Negative Pairs: 4.477751731872559
+2024-05-17 10:56:37,878 - Model - INFO - Epoch 32 (32/100):
+2024-05-17 10:57:10,860 - Model - INFO - Epoch 32 Total Loss: 4.873965263366699, CV Loss: 1.0724668502807617, CM Loss: 1.9007492065429688
+2024-05-17 10:57:35,441 - Model - INFO - Epoch 32 CM Accuracy: 0.55
+2024-05-17 10:57:35,442 - Model - INFO - Epoch 32 CV Mean Pair Distance: Positive Pairs: 4.0307512283325195, Negative Pairs: 4.370184421539307
+2024-05-17 10:57:35,443 - Model - INFO - Epoch 33 (33/100):
+2024-05-17 10:58:08,274 - Model - INFO - Epoch 33 Total Loss: 4.373269081115723, CV Loss: 0.5383232831954956, CM Loss: 1.9174728393554688
+2024-05-17 10:58:31,845 - Model - INFO - Epoch 33 CM Accuracy: 0.56
+2024-05-17 10:58:31,846 - Model - INFO - Epoch 33 CV Mean Pair Distance: Positive Pairs: 4.827948093414307, Negative Pairs: 5.793877124786377
+2024-05-17 10:58:31,847 - Model - INFO - Epoch 34 (34/100):
+2024-05-17 10:59:04,747 - Model - INFO - Epoch 34 Total Loss: 4.729211330413818, CV Loss: 0.9082425832748413, CM Loss: 1.9104843139648438
+2024-05-17 10:59:28,670 - Model - INFO - Epoch 34 CM Accuracy: 0.53
+2024-05-17 10:59:28,671 - Model - INFO - Epoch 34 CV Mean Pair Distance: Positive Pairs: 4.187249183654785, Negative Pairs: 4.758686542510986
+2024-05-17 10:59:28,672 - Model - INFO - Epoch 35 (35/100):
+2024-05-17 11:00:01,705 - Model - INFO - Epoch 35 Total Loss: 4.4844584465026855, CV Loss: 0.6757730841636658, CM Loss: 1.9043426513671875
+2024-05-17 11:00:25,986 - Model - INFO - Epoch 35 CM Accuracy: 0.54
+2024-05-17 11:00:25,987 - Model - INFO - Epoch 35 CV Mean Pair Distance: Positive Pairs: 3.856879472732544, Negative Pairs: 4.505463123321533
+2024-05-17 11:00:25,987 - Model - INFO - Epoch 36 (36/100):
+2024-05-17 11:00:59,376 - Model - INFO - Epoch 36 Total Loss: 4.740461349487305, CV Loss: 0.9212930202484131, CM Loss: 1.9095840454101562
+2024-05-17 11:01:23,214 - Model - INFO - Epoch 36 CM Accuracy: 0.48
+2024-05-17 11:01:23,215 - Model - INFO - Epoch 36 CV Mean Pair Distance: Positive Pairs: 4.033504486083984, Negative Pairs: 4.493605136871338
+2024-05-17 11:01:23,216 - Model - INFO - Epoch 37 (37/100):
+2024-05-17 11:01:56,533 - Model - INFO - Epoch 37 Total Loss: 4.4990057945251465, CV Loss: 0.7009101510047913, CM Loss: 1.8990478515625
+2024-05-17 11:02:20,392 - Model - INFO - Epoch 37 CM Accuracy: 0.58
+2024-05-17 11:02:20,392 - Model - INFO - Epoch 37 CV Mean Pair Distance: Positive Pairs: 3.9123291969299316, Negative Pairs: 4.618183612823486
+2024-05-17 11:02:20,393 - Model - INFO - Epoch 38 (38/100):
+2024-05-17 11:02:53,608 - Model - INFO - Epoch 38 Total Loss: 4.588573455810547, CV Loss: 0.7817343473434448, CM Loss: 1.9034194946289062
+2024-05-17 11:03:17,580 - Model - INFO - Epoch 38 CM Accuracy: 0.61
+2024-05-17 11:03:17,581 - Model - INFO - Epoch 38 CV Mean Pair Distance: Positive Pairs: 3.939467191696167, Negative Pairs: 4.688444137573242
+2024-05-17 11:03:17,582 - Model - INFO - Epoch 39 (39/100):
+2024-05-17 11:03:50,881 - Model - INFO - Epoch 39 Total Loss: 4.467501163482666, CV Loss: 0.6669336557388306, CM Loss: 1.9002838134765625
+2024-05-17 11:04:14,970 - Model - INFO - Epoch 39 CM Accuracy: 0.49
+2024-05-17 11:04:14,970 - Model - INFO - Epoch 39 CV Mean Pair Distance: Positive Pairs: 4.150387763977051, Negative Pairs: 4.77225399017334
+2024-05-17 11:04:14,971 - Model - INFO - Epoch 40 (40/100):
+2024-05-17 11:04:49,084 - Model - INFO - Epoch 40 Total Loss: 4.414394378662109, CV Loss: 0.6001241207122803, CM Loss: 1.907135009765625
+2024-05-17 11:05:19,421 - Model - INFO - Epoch 40 CM Accuracy: 0.62
+2024-05-17 11:05:19,421 - Model - INFO - Epoch 40 CV Mean Pair Distance: Positive Pairs: 4.008439540863037, Negative Pairs: 4.721560478210449
+2024-05-17 11:05:19,422 - Model - INFO - Epoch 41 (41/100):
+2024-05-17 11:05:53,465 - Model - INFO - Epoch 41 Total Loss: 4.637421607971191, CV Loss: 0.818925142288208, CM Loss: 1.9092483520507812
+2024-05-17 11:06:17,667 - Model - INFO - Epoch 41 CM Accuracy: 0.66
+2024-05-17 11:06:17,667 - Model - INFO - Epoch 41 CV Mean Pair Distance: Positive Pairs: 4.230637550354004, Negative Pairs: 4.889061450958252
+2024-05-17 11:06:17,668 - Model - INFO - Epoch 42 (42/100):
+2024-05-17 11:06:50,637 - Model - INFO - Epoch 42 Total Loss: 5.067121505737305, CV Loss: 1.2514169216156006, CM Loss: 1.9078521728515625
+2024-05-17 11:07:14,508 - Model - INFO - Epoch 42 CM Accuracy: 0.63
+2024-05-17 11:07:14,508 - Model - INFO - Epoch 42 CV Mean Pair Distance: Positive Pairs: 4.134921550750732, Negative Pairs: 4.981841564178467
+2024-05-17 11:07:14,509 - Model - INFO - Epoch 43 (43/100):
+2024-05-17 11:07:47,782 - Model - INFO - Epoch 43 Total Loss: 4.475736618041992, CV Loss: 0.6860790252685547, CM Loss: 1.8948287963867188
+2024-05-17 11:08:11,838 - Model - INFO - Epoch 43 CM Accuracy: 0.6
+2024-05-17 11:08:11,838 - Model - INFO - Epoch 43 CV Mean Pair Distance: Positive Pairs: 4.044990062713623, Negative Pairs: 4.674614906311035
+2024-05-17 11:08:11,839 - Model - INFO - Epoch 44 (44/100):
+2024-05-17 11:08:44,947 - Model - INFO - Epoch 44 Total Loss: 4.643599987030029, CV Loss: 0.8460229635238647, CM Loss: 1.8987884521484375
+2024-05-17 11:09:08,843 - Model - INFO - Epoch 44 CM Accuracy: 0.61
+2024-05-17 11:09:08,844 - Model - INFO - Epoch 44 CV Mean Pair Distance: Positive Pairs: 3.889590263366699, Negative Pairs: 4.591225624084473
+2024-05-17 11:09:08,845 - Model - INFO - Epoch 45 (45/100):
+2024-05-17 11:09:41,452 - Model - INFO - Epoch 45 Total Loss: 4.654036521911621, CV Loss: 0.8705132007598877, CM Loss: 1.8917617797851562
+2024-05-17 11:10:05,677 - Model - INFO - Epoch 45 CM Accuracy: 0.62
+2024-05-17 11:10:05,678 - Model - INFO - Epoch 45 CV Mean Pair Distance: Positive Pairs: 4.089590549468994, Negative Pairs: 4.731642246246338
+2024-05-17 11:10:05,679 - Model - INFO - Epoch 46 (46/100):
+2024-05-17 11:10:38,688 - Model - INFO - Epoch 46 Total Loss: 4.489337921142578, CV Loss: 0.6974983215332031, CM Loss: 1.8959197998046875
+2024-05-17 11:11:02,619 - Model - INFO - Epoch 46 CM Accuracy: 0.65
+2024-05-17 11:11:02,619 - Model - INFO - Epoch 46 CV Mean Pair Distance: Positive Pairs: 4.04932975769043, Negative Pairs: 4.948338508605957
+2024-05-17 11:11:02,620 - Model - INFO - Epoch 47 (47/100):
+2024-05-17 11:11:35,702 - Model - INFO - Epoch 47 Total Loss: 4.514277458190918, CV Loss: 0.7480575442314148, CM Loss: 1.8831100463867188
+2024-05-17 11:11:59,610 - Model - INFO - Epoch 47 CM Accuracy: 0.64
+2024-05-17 11:11:59,611 - Model - INFO - Epoch 47 CV Mean Pair Distance: Positive Pairs: 3.8369874954223633, Negative Pairs: 4.913445949554443
+2024-05-17 11:11:59,612 - Model - INFO - Epoch 48 (48/100):
+2024-05-17 11:12:32,955 - Model - INFO - Epoch 48 Total Loss: 4.640508651733398, CV Loss: 0.8569394946098328, CM Loss: 1.89178466796875
+2024-05-17 11:12:56,743 - Model - INFO - Epoch 48 CM Accuracy: 0.6
+2024-05-17 11:12:56,745 - Model - INFO - Epoch 48 CV Mean Pair Distance: Positive Pairs: 3.9263525009155273, Negative Pairs: 4.5823564529418945
+2024-05-17 11:12:56,746 - Model - INFO - Epoch 49 (49/100):
+2024-05-17 11:13:29,843 - Model - INFO - Epoch 49 Total Loss: 4.1661810874938965, CV Loss: 0.40768179297447205, CM Loss: 1.8792495727539062
+2024-05-17 11:13:53,723 - Model - INFO - Epoch 49 CM Accuracy: 0.65
+2024-05-17 11:13:53,723 - Model - INFO - Epoch 49 CV Mean Pair Distance: Positive Pairs: 4.0963640213012695, Negative Pairs: 4.68807315826416
+2024-05-17 11:13:53,724 - Model - INFO - Epoch 50 (50/100):
+2024-05-17 11:14:26,782 - Model - INFO - Epoch 50 Total Loss: 4.748858451843262, CV Loss: 0.9440945386886597, CM Loss: 1.9023818969726562
+2024-05-17 11:14:50,558 - Model - INFO - Epoch 50 CM Accuracy: 0.53
+2024-05-17 11:14:50,558 - Model - INFO - Epoch 50 CV Mean Pair Distance: Positive Pairs: 4.227572441101074, Negative Pairs: 4.905473232269287
+2024-05-17 11:14:50,559 - Model - INFO - Epoch 51 (51/100):
+2024-05-17 11:15:24,146 - Model - INFO - Epoch 51 Total Loss: 4.401090621948242, CV Loss: 0.6117075681686401, CM Loss: 1.8946914672851562
+2024-05-17 11:15:49,155 - Model - INFO - Epoch 51 CM Accuracy: 0.57
+2024-05-17 11:15:49,155 - Model - INFO - Epoch 51 CV Mean Pair Distance: Positive Pairs: 3.992701768875122, Negative Pairs: 4.712388038635254
+2024-05-17 11:15:49,156 - Model - INFO - Epoch 52 (52/100):
+2024-05-17 11:16:23,311 - Model - INFO - Epoch 52 Total Loss: 4.572690486907959, CV Loss: 0.7820868492126465, CM Loss: 1.8953018188476562
+2024-05-17 11:16:47,323 - Model - INFO - Epoch 52 CM Accuracy: 0.67
+2024-05-17 11:16:47,324 - Model - INFO - Epoch 52 CV Mean Pair Distance: Positive Pairs: 4.025360584259033, Negative Pairs: 4.959844589233398
+2024-05-17 11:16:47,325 - Model - INFO - Epoch 53 (53/100):
+2024-05-17 11:17:20,183 - Model - INFO - Epoch 53 Total Loss: 4.615851879119873, CV Loss: 0.7807994484901428, CM Loss: 1.9175262451171875
+2024-05-17 11:17:44,101 - Model - INFO - Epoch 53 CM Accuracy: 0.59
+2024-05-17 11:17:44,102 - Model - INFO - Epoch 53 CV Mean Pair Distance: Positive Pairs: 3.952202796936035, Negative Pairs: 4.498371601104736
+2024-05-17 11:17:44,103 - Model - INFO - Epoch 54 (54/100):
+2024-05-17 11:18:17,736 - Model - INFO - Epoch 54 Total Loss: 4.684901714324951, CV Loss: 0.9029496312141418, CM Loss: 1.8909759521484375
+2024-05-17 11:18:41,461 - Model - INFO - Epoch 54 CM Accuracy: 0.61
+2024-05-17 11:18:41,461 - Model - INFO - Epoch 54 CV Mean Pair Distance: Positive Pairs: 3.9448773860931396, Negative Pairs: 4.66995906829834
+2024-05-17 11:18:41,464 - Model - INFO - Epoch 55 (55/100):
+2024-05-17 11:19:14,820 - Model - INFO - Epoch 55 Total Loss: 4.779986381530762, CV Loss: 1.0151703357696533, CM Loss: 1.8824081420898438
+2024-05-17 11:19:39,072 - Model - INFO - Epoch 55 CM Accuracy: 0.57
+2024-05-17 11:19:39,072 - Model - INFO - Epoch 55 CV Mean Pair Distance: Positive Pairs: 4.013166904449463, Negative Pairs: 4.583744049072266
+2024-05-17 11:19:39,073 - Model - INFO - Epoch 56 (56/100):
+2024-05-17 11:20:12,944 - Model - INFO - Epoch 56 Total Loss: 4.699615478515625, CV Loss: 0.9026796817779541, CM Loss: 1.898468017578125
+2024-05-17 11:20:37,234 - Model - INFO - Epoch 56 CM Accuracy: 0.55
+2024-05-17 11:20:37,234 - Model - INFO - Epoch 56 CV Mean Pair Distance: Positive Pairs: 3.9363083839416504, Negative Pairs: 4.807981491088867
+2024-05-17 11:20:37,235 - Model - INFO - Epoch 57 (57/100):
+2024-05-17 11:21:09,942 - Model - INFO - Epoch 57 Total Loss: 4.541067600250244, CV Loss: 0.7531340718269348, CM Loss: 1.8939666748046875
+2024-05-17 11:21:34,021 - Model - INFO - Epoch 57 CM Accuracy: 0.69
+2024-05-17 11:21:34,022 - Model - INFO - Epoch 57 CV Mean Pair Distance: Positive Pairs: 4.014742851257324, Negative Pairs: 4.831881523132324
+2024-05-17 11:21:34,022 - Model - INFO - Epoch 58 (58/100):
+2024-05-17 11:22:07,079 - Model - INFO - Epoch 58 Total Loss: 4.518876075744629, CV Loss: 0.7188884615898132, CM Loss: 1.899993896484375
+2024-05-17 11:22:31,388 - Model - INFO - Epoch 58 CM Accuracy: 0.67
+2024-05-17 11:22:31,388 - Model - INFO - Epoch 58 CV Mean Pair Distance: Positive Pairs: 3.919673442840576, Negative Pairs: 4.560583114624023
+2024-05-17 11:22:31,391 - Model - INFO - Epoch 59 (59/100):
+2024-05-17 11:29:00,320 - Model - INFO - PARAMETER ...
+2024-05-17 11:29:00,321 - Model - INFO - Namespace(batch_size=32, beta=2.0, decay_rate=0.1, decay_steps=40000, epoch=100, furthest_point_sample=False, gpu='0', learning_rate=0.005, log_dir='exp1', model='pointnet_cls', momentum=0.9, num_iterations=60000, num_point=2048, num_workers=8, optimizer='SGD', use_colors=False, use_cpu=False, use_normals=False, use_scale_and_rotation=False, weight_decay=0.0005)
+2024-05-17 11:29:00,323 - Model - INFO - Load dataset ...
+2024-05-17 11:29:01,881 - Model - INFO - No existing model, starting training from scratch...
+2024-05-17 11:29:01,882 - Model - INFO - Start training...
+2024-05-17 11:29:01,882 - Model - INFO - Epoch 1 (1/100):
+2024-05-17 11:31:04,494 - Model - INFO - PARAMETER ...
+2024-05-17 11:31:04,495 - Model - INFO - Namespace(batch_size=32, beta=2.0, decay_rate=0.1, decay_steps=40000, epoch=100, furthest_point_sample=False, gpu='0', learning_rate=0.005, log_dir='exp1', model='pointnet_cls', momentum=0.9, num_iterations=60000, num_point=2048, num_workers=8, optimizer='SGD', use_colors=False, use_cpu=False, use_normals=False, use_scale_and_rotation=False, weight_decay=0.0005)
+2024-05-17 11:31:04,496 - Model - INFO - Load dataset ...
+2024-05-17 11:31:05,972 - Model - INFO - No existing model, starting training from scratch...
+2024-05-17 11:31:05,973 - Model - INFO - Start training...
+2024-05-17 11:31:05,973 - Model - INFO - Epoch 1 (1/100):
+2024-05-17 11:31:59,928 - Model - INFO - Epoch 1 Total Loss: 5.933377265930176, CV Loss: 1.7405060529708862, CM Loss: 2.096435546875
+2024-05-17 11:32:24,256 - Model - INFO - Epoch 1 CM Accuracy: 0.54
+2024-05-17 11:32:24,256 - Model - INFO - Epoch 1 CV Mean Pair Distance: Positive Pairs: 2.6207668781280518, Negative Pairs: 3.329158067703247
+2024-05-17 11:32:24,257 - Model - INFO - Epoch 2 (2/100):
+2024-05-17 11:32:59,892 - Model - INFO - Epoch 2 Total Loss: 4.61606502532959, CV Loss: 0.7781288623809814, CM Loss: 1.9189682006835938
+2024-05-17 11:33:29,553 - Model - INFO - Epoch 2 CM Accuracy: 0.44
+2024-05-17 11:33:29,553 - Model - INFO - Epoch 2 CV Mean Pair Distance: Positive Pairs: 9.55648136138916, Negative Pairs: 13.6698579788208
+2024-05-17 11:33:29,554 - Model - INFO - Epoch 3 (3/100):
+2024-05-17 11:34:05,399 - Model - INFO - Epoch 3 Total Loss: 4.833739280700684, CV Loss: 0.9990987181663513, CM Loss: 1.9173202514648438
+2024-05-17 11:34:30,437 - Model - INFO - Epoch 3 CM Accuracy: 0.56
+2024-05-17 11:34:30,437 - Model - INFO - Epoch 3 CV Mean Pair Distance: Positive Pairs: 7.6600446701049805, Negative Pairs: 9.748749732971191
+2024-05-17 11:34:30,438 - Model - INFO - Epoch 4 (4/100):
+2024-05-17 11:35:06,067 - Model - INFO - Epoch 4 Total Loss: 4.464231491088867, CV Loss: 0.6433087587356567, CM Loss: 1.91046142578125
+2024-05-17 11:35:31,215 - Model - INFO - Epoch 4 CM Accuracy: 0.52
+2024-05-17 11:35:31,216 - Model - INFO - Epoch 4 CV Mean Pair Distance: Positive Pairs: 4.514875411987305, Negative Pairs: 5.643679141998291
+2024-05-17 11:35:31,217 - Model - INFO - Epoch 5 (5/100):
+2024-05-17 11:36:08,320 - Model - INFO - Epoch 5 Total Loss: 4.937289714813232, CV Loss: 1.128451943397522, CM Loss: 1.9044189453125
+2024-05-17 11:36:32,046 - Model - INFO - Epoch 5 CM Accuracy: 0.57
+2024-05-17 11:36:32,046 - Model - INFO - Epoch 5 CV Mean Pair Distance: Positive Pairs: 5.019360542297363, Negative Pairs: 6.267225742340088
+2024-05-17 11:36:32,047 - Model - INFO - Epoch 6 (6/100):
+2024-05-17 11:37:06,029 - Model - INFO - Epoch 6 Total Loss: 4.6805524826049805, CV Loss: 0.8634903430938721, CM Loss: 1.9085311889648438
+2024-05-17 11:37:29,420 - Model - INFO - Epoch 6 CM Accuracy: 0.62
+2024-05-17 11:37:29,421 - Model - INFO - Epoch 6 CV Mean Pair Distance: Positive Pairs: 4.117287635803223, Negative Pairs: 5.231586933135986
+2024-05-17 11:37:29,421 - Model - INFO - Epoch 7 (7/100):
+2024-05-17 11:38:04,873 - Model - INFO - Epoch 7 Total Loss: 4.998022079467773, CV Loss: 1.1757564544677734, CM Loss: 1.9111328125
+2024-05-17 11:38:29,380 - Model - INFO - Epoch 7 CM Accuracy: 0.51
+2024-05-17 11:38:29,380 - Model - INFO - Epoch 7 CV Mean Pair Distance: Positive Pairs: 4.679004669189453, Negative Pairs: 6.184784412384033
+2024-05-17 11:38:29,382 - Model - INFO - Epoch 8 (8/100):
+2024-05-17 11:39:03,298 - Model - INFO - Epoch 8 Total Loss: 4.808683395385742, CV Loss: 0.9880197048187256, CM Loss: 1.9103317260742188
+2024-05-17 11:39:28,251 - Model - INFO - Epoch 8 CM Accuracy: 0.54
+2024-05-17 11:39:28,251 - Model - INFO - Epoch 8 CV Mean Pair Distance: Positive Pairs: 3.2188870906829834, Negative Pairs: 4.5566935539245605
+2024-05-17 11:39:28,253 - Model - INFO - Epoch 9 (9/100):
+2024-05-17 11:40:02,578 - Model - INFO - Epoch 9 Total Loss: 4.7581305503845215, CV Loss: 0.9446691274642944, CM Loss: 1.9067306518554688
+2024-05-17 11:40:26,539 - Model - INFO - Epoch 9 CM Accuracy: 0.6
+2024-05-17 11:40:26,539 - Model - INFO - Epoch 9 CV Mean Pair Distance: Positive Pairs: 3.5837912559509277, Negative Pairs: 5.151960849761963
+2024-05-17 11:40:26,540 - Model - INFO - Epoch 10 (10/100):
+2024-05-17 11:41:02,802 - Model - INFO - Epoch 10 Total Loss: 4.710119247436523, CV Loss: 0.8933771252632141, CM Loss: 1.9083709716796875
+2024-05-17 11:41:27,621 - Model - INFO - Epoch 10 CM Accuracy: 0.58
+2024-05-17 11:41:27,622 - Model - INFO - Epoch 10 CV Mean Pair Distance: Positive Pairs: 3.4890384674072266, Negative Pairs: 5.078253269195557
+2024-05-17 11:41:27,623 - Model - INFO - Epoch 11 (11/100):
+2024-05-17 11:42:01,772 - Model - INFO - Epoch 11 Total Loss: 4.436669826507568, CV Loss: 0.6265195608139038, CM Loss: 1.9050750732421875
+2024-05-17 11:42:25,344 - Model - INFO - Epoch 11 CM Accuracy: 0.46
+2024-05-17 11:42:25,350 - Model - INFO - Epoch 11 CV Mean Pair Distance: Positive Pairs: 3.4564898014068604, Negative Pairs: 5.232199192047119
+2024-05-17 11:42:25,352 - Model - INFO - Epoch 12 (12/100):
+2024-05-17 11:43:00,077 - Model - INFO - Epoch 12 Total Loss: 4.787787914276123, CV Loss: 0.963584303855896, CM Loss: 1.9121017456054688
+2024-05-17 11:43:23,896 - Model - INFO - Epoch 12 CM Accuracy: 0.6
+2024-05-17 11:43:23,896 - Model - INFO - Epoch 12 CV Mean Pair Distance: Positive Pairs: 3.5527420043945312, Negative Pairs: 6.024406909942627
+2024-05-17 11:43:23,898 - Model - INFO - Epoch 13 (13/100):
+2024-05-17 11:43:58,101 - Model - INFO - Epoch 13 Total Loss: 4.380928039550781, CV Loss: 0.5682144165039062, CM Loss: 1.9063568115234375
+2024-05-17 11:44:22,351 - Model - INFO - Epoch 13 CM Accuracy: 0.6
+2024-05-17 11:44:22,351 - Model - INFO - Epoch 13 CV Mean Pair Distance: Positive Pairs: 3.7024872303009033, Negative Pairs: 5.553279876708984
+2024-05-17 11:44:22,352 - Model - INFO - Epoch 14 (14/100):
+2024-05-17 11:44:56,660 - Model - INFO - Epoch 14 Total Loss: 4.666690826416016, CV Loss: 0.8558845520019531, CM Loss: 1.9054031372070312
+2024-05-17 11:45:20,688 - Model - INFO - Epoch 14 CM Accuracy: 0.5
+2024-05-17 11:45:20,688 - Model - INFO - Epoch 14 CV Mean Pair Distance: Positive Pairs: 3.3787834644317627, Negative Pairs: 4.751012325286865
+2024-05-17 11:45:20,688 - Model - INFO - Epoch 15 (15/100):
+2024-05-17 11:45:54,316 - Model - INFO - Epoch 15 Total Loss: 4.417658805847168, CV Loss: 0.6224777698516846, CM Loss: 1.8975906372070312
+2024-05-17 11:46:17,873 - Model - INFO - Epoch 15 CM Accuracy: 0.58
+2024-05-17 11:46:17,873 - Model - INFO - Epoch 15 CV Mean Pair Distance: Positive Pairs: 3.403729200363159, Negative Pairs: 5.128280162811279
+2024-05-17 11:46:17,873 - Model - INFO - Epoch 16 (16/100):
+2024-05-17 11:46:51,367 - Model - INFO - Epoch 16 Total Loss: 4.740823745727539, CV Loss: 0.9655247926712036, CM Loss: 1.8876495361328125
+2024-05-17 11:47:14,879 - Model - INFO - Epoch 16 CM Accuracy: 0.45
+2024-05-17 11:47:14,880 - Model - INFO - Epoch 16 CV Mean Pair Distance: Positive Pairs: 3.062858819961548, Negative Pairs: 4.96690034866333
+2024-05-17 11:47:14,881 - Model - INFO - Epoch 17 (17/100):
+2024-05-17 11:47:48,680 - Model - INFO - Epoch 17 Total Loss: 4.756603717803955, CV Loss: 0.9888121485710144, CM Loss: 1.8838958740234375
+2024-05-17 11:48:12,415 - Model - INFO - Epoch 17 CM Accuracy: 0.51
+2024-05-17 11:48:12,416 - Model - INFO - Epoch 17 CV Mean Pair Distance: Positive Pairs: 3.036997079849243, Negative Pairs: 4.672554969787598
+2024-05-17 11:48:12,417 - Model - INFO - Epoch 18 (18/100):
+2024-05-17 11:48:46,605 - Model - INFO - Epoch 18 Total Loss: 4.434200763702393, CV Loss: 0.726070761680603, CM Loss: 1.85406494140625
+2024-05-17 11:49:09,822 - Model - INFO - Epoch 18 CM Accuracy: 0.53
+2024-05-17 11:49:09,822 - Model - INFO - Epoch 18 CV Mean Pair Distance: Positive Pairs: 3.8928894996643066, Negative Pairs: 5.352410793304443
+2024-05-17 11:49:09,822 - Model - INFO - Epoch 19 (19/100):
+2024-05-17 11:49:43,810 - Model - INFO - Epoch 19 Total Loss: 4.23359489440918, CV Loss: 0.4479961395263672, CM Loss: 1.8927993774414062
+2024-05-17 11:50:07,602 - Model - INFO - Epoch 19 CM Accuracy: 0.65
+2024-05-17 11:50:07,603 - Model - INFO - Epoch 19 CV Mean Pair Distance: Positive Pairs: 3.3748421669006348, Negative Pairs: 5.942705154418945
+2024-05-17 11:50:07,605 - Model - INFO - Epoch 20 (20/100):
+2024-05-17 11:50:41,564 - Model - INFO - Epoch 20 Total Loss: 4.730432987213135, CV Loss: 1.0378822088241577, CM Loss: 1.8462753295898438
+2024-05-17 11:51:04,943 - Model - INFO - Epoch 20 CM Accuracy: 0.53
+2024-05-17 11:51:04,943 - Model - INFO - Epoch 20 CV Mean Pair Distance: Positive Pairs: 2.981522798538208, Negative Pairs: 4.8907575607299805
+2024-05-17 11:51:04,946 - Model - INFO - Epoch 21 (21/100):
+2024-05-17 11:51:38,509 - Model - INFO - Epoch 21 Total Loss: 4.338152885437012, CV Loss: 0.6605176329612732, CM Loss: 1.8388175964355469
+2024-05-17 11:52:01,951 - Model - INFO - Epoch 21 CM Accuracy: 0.6
+2024-05-17 11:52:01,952 - Model - INFO - Epoch 21 CV Mean Pair Distance: Positive Pairs: 3.2195911407470703, Negative Pairs: 5.370883941650391
+2024-05-17 11:52:01,953 - Model - INFO - Epoch 22 (22/100):
+2024-05-17 11:52:35,492 - Model - INFO - Epoch 22 Total Loss: 4.362360000610352, CV Loss: 0.7961214184761047, CM Loss: 1.7831192016601562
+2024-05-17 11:52:59,128 - Model - INFO - Epoch 22 CM Accuracy: 0.6
+2024-05-17 11:52:59,128 - Model - INFO - Epoch 22 CV Mean Pair Distance: Positive Pairs: 3.827177047729492, Negative Pairs: 6.167918682098389
+2024-05-17 11:52:59,129 - Model - INFO - Epoch 23 (23/100):
+2024-05-17 11:53:34,076 - Model - INFO - Epoch 23 Total Loss: 3.9410996437072754, CV Loss: 0.36545413732528687, CM Loss: 1.7878227233886719
+2024-05-17 11:53:57,521 - Model - INFO - Epoch 23 CM Accuracy: 0.61
+2024-05-17 11:53:57,521 - Model - INFO - Epoch 23 CV Mean Pair Distance: Positive Pairs: 3.7031381130218506, Negative Pairs: 5.142711639404297
+2024-05-17 11:53:57,523 - Model - INFO - Epoch 24 (24/100):
+2024-05-17 11:54:31,508 - Model - INFO - Epoch 24 Total Loss: 3.751345157623291, CV Loss: 0.4750809669494629, CM Loss: 1.638132095336914
+2024-05-17 11:54:54,889 - Model - INFO - Epoch 24 CM Accuracy: 0.62
+2024-05-17 11:54:54,890 - Model - INFO - Epoch 24 CV Mean Pair Distance: Positive Pairs: 3.2748215198516846, Negative Pairs: 5.923060417175293
+2024-05-17 11:54:54,891 - Model - INFO - Epoch 25 (25/100):
+2024-05-17 11:55:29,028 - Model - INFO - Epoch 25 Total Loss: 4.357341289520264, CV Loss: 0.3586287498474121, CM Loss: 1.9993562698364258
+2024-05-17 11:55:52,467 - Model - INFO - Epoch 25 CM Accuracy: 0.6
+2024-05-17 11:55:52,467 - Model - INFO - Epoch 25 CV Mean Pair Distance: Positive Pairs: 4.0259881019592285, Negative Pairs: 6.048016548156738
+2024-05-17 11:55:52,468 - Model - INFO - Epoch 26 (26/100):
+2024-05-17 11:56:25,785 - Model - INFO - Epoch 26 Total Loss: 4.5355329513549805, CV Loss: 0.6699000597000122, CM Loss: 1.932816505432129
+2024-05-17 11:56:49,266 - Model - INFO - Epoch 26 CM Accuracy: 0.53
+2024-05-17 11:56:49,266 - Model - INFO - Epoch 26 CV Mean Pair Distance: Positive Pairs: 4.962979316711426, Negative Pairs: 6.865042686462402
+2024-05-17 11:56:49,267 - Model - INFO - Epoch 27 (27/100):
+2024-05-17 11:57:22,870 - Model - INFO - Epoch 27 Total Loss: 4.700326919555664, CV Loss: 0.9618016481399536, CM Loss: 1.8692626953125
+2024-05-17 11:57:46,247 - Model - INFO - Epoch 27 CM Accuracy: 0.43
+2024-05-17 11:57:46,248 - Model - INFO - Epoch 27 CV Mean Pair Distance: Positive Pairs: 3.431121826171875, Negative Pairs: 5.14933967590332
+2024-05-17 11:57:46,248 - Model - INFO - Epoch 28 (28/100):
+2024-05-17 11:58:19,813 - Model - INFO - Epoch 28 Total Loss: 4.741156578063965, CV Loss: 1.0166388750076294, CM Loss: 1.8622589111328125
+2024-05-17 11:58:43,246 - Model - INFO - Epoch 28 CM Accuracy: 0.54
+2024-05-17 11:58:43,247 - Model - INFO - Epoch 28 CV Mean Pair Distance: Positive Pairs: 3.1348459720611572, Negative Pairs: 4.6168293952941895
+2024-05-17 11:58:43,248 - Model - INFO - Epoch 29 (29/100):
+2024-05-17 11:59:17,166 - Model - INFO - Epoch 29 Total Loss: 4.424013137817383, CV Loss: 0.7583634853363037, CM Loss: 1.83282470703125
+2024-05-17 11:59:40,605 - Model - INFO - Epoch 29 CM Accuracy: 0.56
+2024-05-17 11:59:40,606 - Model - INFO - Epoch 29 CV Mean Pair Distance: Positive Pairs: 3.16654634475708, Negative Pairs: 5.414794921875
+2024-05-17 11:59:40,606 - Model - INFO - Epoch 30 (30/100):
+2024-05-17 12:00:14,602 - Model - INFO - Epoch 30 Total Loss: 3.5088303089141846, CV Loss: 0.15903782844543457, CM Loss: 1.674896240234375
+2024-05-17 12:00:37,998 - Model - INFO - Epoch 30 CM Accuracy: 0.43
+2024-05-17 12:00:37,998 - Model - INFO - Epoch 30 CV Mean Pair Distance: Positive Pairs: 3.1742334365844727, Negative Pairs: 4.374505996704102
+2024-05-17 12:00:37,998 - Model - INFO - Epoch 31 (31/100):
+2024-05-17 12:01:11,632 - Model - INFO - Epoch 31 Total Loss: 4.275571346282959, CV Loss: 0.6935285925865173, CM Loss: 1.7910213470458984
+2024-05-17 12:01:35,340 - Model - INFO - Epoch 31 CM Accuracy: 0.52
+2024-05-17 12:01:35,340 - Model - INFO - Epoch 31 CV Mean Pair Distance: Positive Pairs: 3.004436731338501, Negative Pairs: 5.610891342163086
+2024-05-17 12:01:35,340 - Model - INFO - Epoch 32 (32/100):
+2024-05-17 12:02:08,746 - Model - INFO - Epoch 32 Total Loss: 3.995513439178467, CV Loss: 0.6797670722007751, CM Loss: 1.6578731536865234
+2024-05-17 12:02:32,150 - Model - INFO - Epoch 32 CM Accuracy: 0.52
+2024-05-17 12:02:32,151 - Model - INFO - Epoch 32 CV Mean Pair Distance: Positive Pairs: 3.474358558654785, Negative Pairs: 5.741092681884766
+2024-05-17 12:02:32,151 - Model - INFO - Epoch 33 (33/100):
+2024-05-17 12:03:05,121 - Model - INFO - Epoch 33 Total Loss: 4.352605819702148, CV Loss: 0.7811449766159058, CM Loss: 1.7857303619384766
+2024-05-17 12:03:28,539 - Model - INFO - Epoch 33 CM Accuracy: 0.42
+2024-05-17 12:03:28,539 - Model - INFO - Epoch 33 CV Mean Pair Distance: Positive Pairs: 3.367417097091675, Negative Pairs: 6.322180271148682
+2024-05-17 12:03:28,541 - Model - INFO - Epoch 34 (34/100):
+2024-05-17 12:04:02,029 - Model - INFO - Epoch 34 Total Loss: 4.155933380126953, CV Loss: 0.6837999820709229, CM Loss: 1.7360668182373047
+2024-05-17 12:04:26,519 - Model - INFO - Epoch 34 CM Accuracy: 0.49
+2024-05-17 12:04:26,519 - Model - INFO - Epoch 34 CV Mean Pair Distance: Positive Pairs: 3.489184856414795, Negative Pairs: 6.0154314041137695
+2024-05-17 12:04:26,521 - Model - INFO - Epoch 35 (35/100):
+2024-05-17 12:04:59,979 - Model - INFO - Epoch 35 Total Loss: 3.972534656524658, CV Loss: 0.5326237678527832, CM Loss: 1.7199554443359375
+2024-05-17 12:05:24,071 - Model - INFO - Epoch 35 CM Accuracy: 0.45
+2024-05-17 12:05:24,071 - Model - INFO - Epoch 35 CV Mean Pair Distance: Positive Pairs: 3.5014994144439697, Negative Pairs: 6.061947822570801
+2024-05-17 12:05:24,073 - Model - INFO - Epoch 36 (36/100):
+2024-05-17 12:05:57,601 - Model - INFO - Epoch 36 Total Loss: 4.211164951324463, CV Loss: 0.433893620967865, CM Loss: 1.8886356353759766
+2024-05-17 12:06:22,739 - Model - INFO - Epoch 36 CM Accuracy: 0.5
+2024-05-17 12:06:22,739 - Model - INFO - Epoch 36 CV Mean Pair Distance: Positive Pairs: 2.7813053131103516, Negative Pairs: 4.305788993835449
+2024-05-17 12:06:22,741 - Model - INFO - Epoch 37 (37/100):
+2024-05-17 12:06:57,300 - Model - INFO - Epoch 37 Total Loss: 3.573486804962158, CV Loss: 0.5882377624511719, CM Loss: 1.4926245212554932
+2024-05-17 12:07:21,286 - Model - INFO - Epoch 37 CM Accuracy: 0.49
+2024-05-17 12:07:21,287 - Model - INFO - Epoch 37 CV Mean Pair Distance: Positive Pairs: 2.84085750579834, Negative Pairs: 4.933563709259033
+2024-05-17 12:07:21,287 - Model - INFO - Epoch 38 (38/100):
+2024-05-17 12:08:07,001 - Model - INFO - PARAMETER ...
+2024-05-17 12:08:07,001 - Model - INFO - Namespace(batch_size=32, beta=2.0, decay_rate=0.1, decay_steps=10000, epoch=100, furthest_point_sample=False, gpu='0', learning_rate=0.001, log_dir='exp1', model='pointnet_cls', momentum=0.9, num_iterations=60000, num_point=2048, num_workers=8, optimizer='SGD', use_colors=False, use_cpu=False, use_normals=False, use_scale_and_rotation=False, weight_decay=0.0005)
+2024-05-17 12:08:07,003 - Model - INFO - Load dataset ...
+2024-05-17 12:08:08,525 - Model - INFO - No existing model, starting training from scratch...
+2024-05-17 12:08:08,526 - Model - INFO - Start training...
+2024-05-17 12:08:08,526 - Model - INFO - Epoch 1 (1/100):
+2024-05-17 12:08:48,655 - Model - INFO - Epoch 1 Total Loss: 5.608761787414551, CV Loss: 1.6257295608520508, CM Loss: 1.99151611328125
+2024-05-17 12:09:12,017 - Model - INFO - Epoch 1 CM Accuracy: 0.52
+2024-05-17 12:09:12,017 - Model - INFO - Epoch 1 CV Mean Pair Distance: Positive Pairs: 2.279353380203247, Negative Pairs: 2.685563087463379
+2024-05-17 12:09:12,021 - Model - INFO - Epoch 2 (2/100):
+2024-05-17 12:09:45,922 - Model - INFO - Epoch 2 Total Loss: 4.926811695098877, CV Loss: 1.090202808380127, CM Loss: 1.918304443359375
+2024-05-17 12:10:10,069 - Model - INFO - Epoch 2 CM Accuracy: 0.62
+2024-05-17 12:10:10,069 - Model - INFO - Epoch 2 CV Mean Pair Distance: Positive Pairs: 4.089735507965088, Negative Pairs: 4.631661891937256
+2024-05-17 12:10:10,071 - Model - INFO - Epoch 3 (3/100):
+2024-05-17 12:10:43,541 - Model - INFO - Epoch 3 Total Loss: 4.513698577880859, CV Loss: 0.683819055557251, CM Loss: 1.9149398803710938
+2024-05-17 12:11:07,034 - Model - INFO - Epoch 3 CM Accuracy: 0.63
+2024-05-17 12:11:07,034 - Model - INFO - Epoch 3 CV Mean Pair Distance: Positive Pairs: 3.7054150104522705, Negative Pairs: 4.239402770996094
+2024-05-17 12:11:07,035 - Model - INFO - Epoch 4 (4/100):
+2024-05-17 12:11:40,616 - Model - INFO - Epoch 4 Total Loss: 4.977381229400635, CV Loss: 1.1619516611099243, CM Loss: 1.90771484375
+2024-05-17 12:12:04,595 - Model - INFO - Epoch 4 CM Accuracy: 0.61
+2024-05-17 12:12:04,595 - Model - INFO - Epoch 4 CV Mean Pair Distance: Positive Pairs: 4.083037853240967, Negative Pairs: 4.815054416656494
+2024-05-17 12:12:04,596 - Model - INFO - Epoch 5 (5/100):
+2024-05-17 12:12:38,779 - Model - INFO - Epoch 5 Total Loss: 4.721926689147949, CV Loss: 0.9069092273712158, CM Loss: 1.9075088500976562
+2024-05-17 12:13:02,199 - Model - INFO - Epoch 5 CM Accuracy: 0.5
+2024-05-17 12:13:02,199 - Model - INFO - Epoch 5 CV Mean Pair Distance: Positive Pairs: 4.209657669067383, Negative Pairs: 4.783651828765869
+2024-05-17 12:13:02,201 - Model - INFO - Epoch 6 (6/100):
+2024-05-17 12:13:36,927 - Model - INFO - Epoch 6 Total Loss: 4.53730583190918, CV Loss: 0.7013988494873047, CM Loss: 1.9179534912109375
+2024-05-17 12:14:00,391 - Model - INFO - Epoch 6 CM Accuracy: 0.45
+2024-05-17 12:14:00,391 - Model - INFO - Epoch 6 CV Mean Pair Distance: Positive Pairs: 4.236042499542236, Negative Pairs: 4.826244354248047
+2024-05-17 12:14:00,393 - Model - INFO - Epoch 7 (7/100):
+2024-05-17 12:14:34,317 - Model - INFO - Epoch 7 Total Loss: 4.902894496917725, CV Loss: 1.0837875604629517, CM Loss: 1.9095535278320312
+2024-05-17 12:14:57,581 - Model - INFO - Epoch 7 CM Accuracy: 0.44
+2024-05-17 12:14:57,582 - Model - INFO - Epoch 7 CV Mean Pair Distance: Positive Pairs: 4.81325101852417, Negative Pairs: 5.47620964050293
+2024-05-17 12:14:57,583 - Model - INFO - Epoch 8 (8/100):
+2024-05-17 12:15:31,525 - Model - INFO - Epoch 8 Total Loss: 4.803441047668457, CV Loss: 0.9810687303543091, CM Loss: 1.9111862182617188
+2024-05-17 12:15:54,949 - Model - INFO - Epoch 8 CM Accuracy: 0.41
+2024-05-17 12:15:54,950 - Model - INFO - Epoch 8 CV Mean Pair Distance: Positive Pairs: 4.253808975219727, Negative Pairs: 4.9680609703063965
+2024-05-17 12:15:54,951 - Model - INFO - Epoch 9 (9/100):
+2024-05-17 12:16:28,672 - Model - INFO - Epoch 9 Total Loss: 4.666463375091553, CV Loss: 0.8552602529525757, CM Loss: 1.9056015014648438
+2024-05-17 12:16:51,933 - Model - INFO - Epoch 9 CM Accuracy: 0.42
+2024-05-17 12:16:51,933 - Model - INFO - Epoch 9 CV Mean Pair Distance: Positive Pairs: 3.9881067276000977, Negative Pairs: 4.841054916381836
+2024-05-17 12:16:51,934 - Model - INFO - Epoch 10 (10/100):
+2024-05-17 12:17:27,011 - Model - INFO - Epoch 10 Total Loss: 4.663739204406738, CV Loss: 0.8434875011444092, CM Loss: 1.910125732421875
+2024-05-17 12:17:50,717 - Model - INFO - Epoch 10 CM Accuracy: 0.38
+2024-05-17 12:17:50,718 - Model - INFO - Epoch 10 CV Mean Pair Distance: Positive Pairs: 3.851181983947754, Negative Pairs: 4.30642032623291
+2024-05-17 12:17:50,719 - Model - INFO - Epoch 11 (11/100):
+2024-05-17 12:18:24,888 - Model - INFO - Epoch 11 Total Loss: 4.7965922355651855, CV Loss: 0.9917520880699158, CM Loss: 1.9024200439453125
+2024-05-17 12:18:48,281 - Model - INFO - Epoch 11 CM Accuracy: 0.41
+2024-05-17 12:18:48,281 - Model - INFO - Epoch 11 CV Mean Pair Distance: Positive Pairs: 3.960460901260376, Negative Pairs: 4.591962814331055
+2024-05-17 12:18:48,283 - Model - INFO - Epoch 12 (12/100):
+2024-05-17 12:19:21,479 - Model - INFO - Epoch 12 Total Loss: 4.813546180725098, CV Loss: 1.001503825187683, CM Loss: 1.9060211181640625
+2024-05-17 12:19:44,315 - Model - INFO - Epoch 12 CM Accuracy: 0.43
+2024-05-17 12:19:44,316 - Model - INFO - Epoch 12 CV Mean Pair Distance: Positive Pairs: 3.8546717166900635, Negative Pairs: 4.857265949249268
+2024-05-17 12:19:44,317 - Model - INFO - Epoch 13 (13/100):
+2024-05-17 12:20:18,653 - Model - INFO - Epoch 13 Total Loss: 4.644855499267578, CV Loss: 0.8381388187408447, CM Loss: 1.9033584594726562
+2024-05-17 12:20:41,854 - Model - INFO - Epoch 13 CM Accuracy: 0.42
+2024-05-17 12:20:41,854 - Model - INFO - Epoch 13 CV Mean Pair Distance: Positive Pairs: 3.8970248699188232, Negative Pairs: 4.736547470092773
+2024-05-17 12:20:41,855 - Model - INFO - Epoch 14 (14/100):
+2024-05-17 12:21:15,553 - Model - INFO - Epoch 14 Total Loss: 4.565532684326172, CV Loss: 0.7659415006637573, CM Loss: 1.8997955322265625
+2024-05-17 12:21:39,236 - Model - INFO - Epoch 14 CM Accuracy: 0.5
+2024-05-17 12:21:39,236 - Model - INFO - Epoch 14 CV Mean Pair Distance: Positive Pairs: 4.041225433349609, Negative Pairs: 5.012998580932617
+2024-05-17 12:21:39,237 - Model - INFO - Epoch 15 (15/100):
+2024-05-17 12:22:12,995 - Model - INFO - Epoch 15 Total Loss: 4.66859769821167, CV Loss: 0.8621554374694824, CM Loss: 1.9032211303710938
+2024-05-17 12:23:28,542 - Model - INFO - PARAMETER ...
+2024-05-17 12:23:28,542 - Model - INFO - Namespace(batch_size=32, beta=2.0, decay_rate=0.1, decay_steps=10000, epoch=100, furthest_point_sample=False, gpu='0', learning_rate=0.001, log_dir='exp1', model='pointnet_cls', momentum=0.9, num_iterations=60000, num_point=4096, num_workers=8, optimizer='SGD', use_colors=False, use_cpu=False, use_normals=False, use_scale_and_rotation=False, weight_decay=0.0005)
+2024-05-17 12:23:28,544 - Model - INFO - Load dataset ...
+2024-05-17 12:23:30,034 - Model - INFO - No existing model, starting training from scratch...
+2024-05-17 12:23:30,034 - Model - INFO - Start training...
+2024-05-17 12:23:30,035 - Model - INFO - Epoch 1 (1/100):
+2024-05-17 12:25:13,010 - Model - INFO - PARAMETER ...
+2024-05-17 12:25:13,011 - Model - INFO - Namespace(batch_size=32, beta=2.0, decay_rate=0.1, decay_steps=10000, epoch=100, furthest_point_sample=True, gpu='0', learning_rate=0.0005, log_dir='exp1', model='pointnet_cls', momentum=0.9, num_iterations=60000, num_point=2048, num_workers=8, optimizer='SGD', use_colors=False, use_cpu=False, use_normals=False, use_scale_and_rotation=False, weight_decay=0.0005)
+2024-05-17 12:25:13,013 - Model - INFO - Load dataset ...
+2024-05-17 12:25:14,479 - Model - INFO - No existing model, starting training from scratch...
+2024-05-17 12:25:14,480 - Model - INFO - Start training...
+2024-05-17 12:25:14,481 - Model - INFO - Epoch 1 (1/100):
+2024-05-17 12:26:21,075 - Model - INFO - Epoch 1 Total Loss: 6.546570301055908, CV Loss: 1.6971787214279175, CM Loss: 2.4246957302093506
+2024-05-17 12:26:56,616 - Model - INFO - Epoch 1 CM Accuracy: 0.59
+2024-05-17 12:26:56,616 - Model - INFO - Epoch 1 CV Mean Pair Distance: Positive Pairs: 1.3980624675750732, Negative Pairs: 1.702326774597168
+2024-05-17 12:26:56,617 - Model - INFO - Epoch 2 (2/100):
+2024-05-17 12:28:00,501 - Model - INFO - Epoch 2 Total Loss: 5.4038496017456055, CV Loss: 1.5387523174285889, CM Loss: 1.9325485229492188
+2024-05-17 12:28:36,138 - Model - INFO - Epoch 2 CM Accuracy: 0.45
+2024-05-17 12:28:36,139 - Model - INFO - Epoch 2 CV Mean Pair Distance: Positive Pairs: 2.879866600036621, Negative Pairs: 3.274075508117676
+2024-05-17 12:28:36,140 - Model - INFO - Epoch 3 (3/100):
+2024-05-17 12:29:43,501 - Model - INFO - Epoch 3 Total Loss: 5.013506889343262, CV Loss: 1.1804759502410889, CM Loss: 1.9165153503417969
+2024-05-17 12:30:19,920 - Model - INFO - Epoch 3 CM Accuracy: 0.49
+2024-05-17 12:30:19,920 - Model - INFO - Epoch 3 CV Mean Pair Distance: Positive Pairs: 4.482818603515625, Negative Pairs: 5.205716133117676
+2024-05-17 12:30:19,922 - Model - INFO - Epoch 4 (4/100):
+2024-05-17 12:31:26,836 - Model - INFO - Epoch 4 Total Loss: 4.681391716003418, CV Loss: 0.8640545010566711, CM Loss: 1.9086685180664062
+2024-05-17 12:32:02,698 - Model - INFO - Epoch 4 CM Accuracy: 0.42
+2024-05-17 12:32:02,698 - Model - INFO - Epoch 4 CV Mean Pair Distance: Positive Pairs: 3.9203951358795166, Negative Pairs: 4.556933403015137
+2024-05-17 12:32:02,700 - Model - INFO - Epoch 5 (5/100):
+2024-05-17 12:33:09,201 - Model - INFO - Epoch 5 Total Loss: 4.9975738525390625, CV Loss: 1.1624908447265625, CM Loss: 1.91754150390625
+2024-05-17 12:33:44,675 - Model - INFO - Epoch 5 CM Accuracy: 0.43
+2024-05-17 12:33:44,675 - Model - INFO - Epoch 5 CV Mean Pair Distance: Positive Pairs: 4.04660177230835, Negative Pairs: 4.5212507247924805
+2024-05-17 12:33:44,677 - Model - INFO - Epoch 6 (6/100):
+2024-05-17 12:34:50,761 - Model - INFO - Epoch 6 Total Loss: 4.908754348754883, CV Loss: 1.0842759609222412, CM Loss: 1.9122390747070312
+2024-05-17 12:35:27,058 - Model - INFO - Epoch 6 CM Accuracy: 0.48
+2024-05-17 12:35:27,059 - Model - INFO - Epoch 6 CV Mean Pair Distance: Positive Pairs: 4.483438014984131, Negative Pairs: 5.322801113128662
+2024-05-17 12:35:27,060 - Model - INFO - Epoch 7 (7/100):
+2024-05-17 12:36:32,339 - Model - INFO - Epoch 7 Total Loss: 4.846926212310791, CV Loss: 1.0178245306015015, CM Loss: 1.91455078125
+2024-05-17 12:37:07,850 - Model - INFO - Epoch 7 CM Accuracy: 0.5
+2024-05-17 12:37:07,850 - Model - INFO - Epoch 7 CV Mean Pair Distance: Positive Pairs: 4.840514659881592, Negative Pairs: 5.444628715515137
+2024-05-17 12:37:07,852 - Model - INFO - Epoch 8 (8/100):
+2024-05-17 12:38:12,094 - Model - INFO - Epoch 8 Total Loss: 4.775927543640137, CV Loss: 0.9411649703979492, CM Loss: 1.9173812866210938
+2024-05-17 12:38:47,605 - Model - INFO - Epoch 8 CM Accuracy: 0.39
+2024-05-17 12:38:47,605 - Model - INFO - Epoch 8 CV Mean Pair Distance: Positive Pairs: 4.194882392883301, Negative Pairs: 4.746857643127441
+2024-05-17 12:38:47,607 - Model - INFO - Epoch 9 (9/100):
+2024-05-17 12:39:53,660 - Model - INFO - Epoch 9 Total Loss: 4.457574844360352, CV Loss: 0.6388951539993286, CM Loss: 1.9093399047851562
+2024-05-17 12:40:30,358 - Model - INFO - Epoch 9 CM Accuracy: 0.45
+2024-05-17 12:40:30,359 - Model - INFO - Epoch 9 CV Mean Pair Distance: Positive Pairs: 4.054107189178467, Negative Pairs: 4.590776443481445
+2024-05-17 12:40:30,361 - Model - INFO - Epoch 10 (10/100):
+2024-05-17 12:41:36,658 - Model - INFO - Epoch 10 Total Loss: 4.698365211486816, CV Loss: 0.883439302444458, CM Loss: 1.9074630737304688
+2024-05-17 12:42:12,732 - Model - INFO - Epoch 10 CM Accuracy: 0.56
+2024-05-17 12:42:12,732 - Model - INFO - Epoch 10 CV Mean Pair Distance: Positive Pairs: 3.9585964679718018, Negative Pairs: 4.501794815063477
+2024-05-17 12:42:12,733 - Model - INFO - Epoch 11 (11/100):
+2024-05-17 12:43:19,393 - Model - INFO - Epoch 11 Total Loss: 4.582433223724365, CV Loss: 0.7781272530555725, CM Loss: 1.9021530151367188
+2024-05-17 12:43:57,393 - Model - INFO - Epoch 11 CM Accuracy: 0.52
+2024-05-17 12:43:57,393 - Model - INFO - Epoch 11 CV Mean Pair Distance: Positive Pairs: 3.835240364074707, Negative Pairs: 4.701629161834717
+2024-05-17 12:43:57,394 - Model - INFO - Epoch 12 (12/100):
+2024-05-17 12:45:06,153 - Model - INFO - Epoch 12 Total Loss: 4.709332466125488, CV Loss: 0.9043551087379456, CM Loss: 1.9024887084960938
+2024-05-17 12:45:42,456 - Model - INFO - Epoch 12 CM Accuracy: 0.52
+2024-05-17 12:45:42,456 - Model - INFO - Epoch 12 CV Mean Pair Distance: Positive Pairs: 3.893094778060913, Negative Pairs: 4.55280065536499
+2024-05-17 12:45:42,457 - Model - INFO - Epoch 13 (13/100):
+2024-05-17 12:47:41,149 - Model - INFO - Epoch 13 Total Loss: 4.6644721031188965, CV Loss: 0.8579533696174622, CM Loss: 1.90325927734375
+2024-05-17 18:44:41,142 - Model - INFO - PARAMETER ...
+2024-05-17 18:44:41,143 - Model - INFO - Namespace(batch_size=32, beta=2.0, decay_rate=0.1, decay_steps=10000, epoch=100, furthest_point_sample=True, gpu='0', learning_rate=0.0005, log_dir='exp1', model='pointnet_cls', momentum=0.9, num_iterations=60000, num_point=2048, num_workers=8, optimizer='SGD', use_colors=False, use_cpu=False, use_normals=False, use_scale_and_rotation=False, weight_decay=0.0005)
+2024-05-17 18:44:41,144 - Model - INFO - Load dataset ...
+2024-05-17 18:44:42,061 - Model - INFO - No existing model, starting training from scratch...
+2024-05-17 18:44:42,062 - Model - INFO - Start training...
+2024-05-17 18:44:42,062 - Model - INFO - Epoch 1 (1/100):
+2024-05-17 18:45:48,831 - Model - INFO - Epoch 1 Total Loss: 6.3315043449401855, CV Loss: 0.7387081384658813, CM Loss: 2.796398162841797
+2024-05-17 18:45:49,336 - Model - INFO - Epoch 1 Total Loss: 6.477866172790527, CV Loss: 0.8982608318328857, CM Loss: 2.7898025512695312
+2024-05-17 18:45:49,838 - Model - INFO - Epoch 1 Total Loss: 6.475037097930908, CV Loss: 0.8351367115974426, CM Loss: 2.8199501037597656
+2024-05-17 18:45:50,284 - Model - INFO - Epoch 1 Total Loss: 6.089231491088867, CV Loss: 0.586877703666687, CM Loss: 2.7511768341064453
+2024-05-17 18:45:50,830 - Model - INFO - Epoch 1 Total Loss: 4.927080154418945, CV Loss: 0.6904621124267578, CM Loss: 2.1183090209960938
+2024-05-17 18:45:51,337 - Model - INFO - Epoch 1 Total Loss: 4.369277477264404, CV Loss: 0.316556453704834, CM Loss: 2.026360511779785
+2024-05-17 18:45:51,938 - Model - INFO - Epoch 1 Total Loss: 5.426008224487305, CV Loss: 0.7184457182884216, CM Loss: 2.353781223297119
+2024-05-17 18:45:52,512 - Model - INFO - Epoch 1 Total Loss: 5.612932205200195, CV Loss: 0.6030911803245544, CM Loss: 2.504920482635498
+2024-05-17 18:46:12,664 - Model - INFO - Epoch 1 Total Loss: 5.426011562347412, CV Loss: 0.9300035238265991, CM Loss: 2.2480039596557617
+2024-05-17 18:46:13,204 - Model - INFO - Epoch 1 Total Loss: 4.950739860534668, CV Loss: 0.881416380405426, CM Loss: 2.0346617698669434
+2024-05-17 18:46:13,702 - Model - INFO - Epoch 1 Total Loss: 4.521322250366211, CV Loss: 0.623647928237915, CM Loss: 1.9488372802734375
+2024-05-17 18:46:14,248 - Model - INFO - Epoch 1 Total Loss: 5.065113544464111, CV Loss: 0.8600965738296509, CM Loss: 2.102508544921875
+2024-05-17 18:46:14,778 - Model - INFO - Epoch 1 Total Loss: 4.772957801818848, CV Loss: 0.49726182222366333, CM Loss: 2.137847900390625
+2024-05-17 18:46:15,299 - Model - INFO - Epoch 1 Total Loss: 5.257673263549805, CV Loss: 1.0920088291168213, CM Loss: 2.0828323364257812
+2024-05-17 18:46:15,864 - Model - INFO - Epoch 1 Total Loss: 4.219862937927246, CV Loss: 0.33685219287872314, CM Loss: 1.9415054321289062
+2024-05-17 18:46:16,465 - Model - INFO - Epoch 1 Total Loss: 4.477479934692383, CV Loss: 0.6323107481002808, CM Loss: 1.9225845336914062
+2024-05-17 18:46:44,860 - Model - INFO - Epoch 1 Total Loss: 4.582113265991211, CV Loss: 0.7037067413330078, CM Loss: 1.9392032623291016
+2024-05-17 18:46:45,344 - Model - INFO - Epoch 1 Total Loss: 4.6302947998046875, CV Loss: 0.6428908705711365, CM Loss: 1.9937019348144531
+2024-05-17 18:46:45,859 - Model - INFO - Epoch 1 Total Loss: 5.218544960021973, CV Loss: 1.186619520187378, CM Loss: 2.015962600708008
+2024-05-17 18:46:46,441 - Model - INFO - Epoch 1 Total Loss: 4.5900044441223145, CV Loss: 0.615570604801178, CM Loss: 1.9872169494628906
+2024-05-17 18:46:47,047 - Model - INFO - Epoch 1 Total Loss: 4.4892659187316895, CV Loss: 0.5939260721206665, CM Loss: 1.9476699829101562
+2024-05-17 18:46:48,335 - Model - INFO - Epoch 1 Total Loss: 4.350939750671387, CV Loss: 0.5150173306465149, CM Loss: 1.9179611206054688
+2024-05-17 18:46:48,830 - Model - INFO - Epoch 1 Total Loss: 4.491984844207764, CV Loss: 0.6531022787094116, CM Loss: 1.9194412231445312
+2024-05-17 18:46:49,411 - Model - INFO - Epoch 1 Total Loss: 4.882993698120117, CV Loss: 1.0167677402496338, CM Loss: 1.9331130981445312
+2024-05-17 18:47:13,831 - Model - INFO - Epoch 1 Total Loss: 4.8891072273254395, CV Loss: 0.9941794276237488, CM Loss: 1.9474639892578125
+2024-05-17 18:47:15,052 - Model - INFO - Epoch 1 Total Loss: 4.623711585998535, CV Loss: 0.7015926241874695, CM Loss: 1.9610595703125
+2024-05-17 18:47:15,540 - Model - INFO - Epoch 1 Total Loss: 4.551939010620117, CV Loss: 0.6718426942825317, CM Loss: 1.9400482177734375
+2024-05-17 18:47:16,002 - Model - INFO - Epoch 1 Total Loss: 4.541102886199951, CV Loss: 0.6664996147155762, CM Loss: 1.9373016357421875
+2024-05-17 18:47:16,525 - Model - INFO - Epoch 1 Total Loss: 4.378830432891846, CV Loss: 0.5428625345230103, CM Loss: 1.9179840087890625
+2024-05-17 18:47:16,976 - Model - INFO - Epoch 1 Total Loss: 4.280391693115234, CV Loss: 0.4641227126121521, CM Loss: 1.9081344604492188
+2024-05-17 18:47:18,070 - Model - INFO - Epoch 1 Total Loss: 4.283273220062256, CV Loss: 0.4592834711074829, CM Loss: 1.9119949340820312
+2024-05-17 18:47:54,709 - Model - INFO - Epoch 1 CM Accuracy: 0.48
+2024-05-17 18:47:54,710 - Model - INFO - Epoch 1 CV Mean Pair Distance: Positive Pairs: 16.86116600036621, Negative Pairs: 20.52166175842285
+2024-05-17 18:47:54,711 - Model - INFO - Epoch 2 (2/100):
+2024-05-17 18:48:43,031 - Model - INFO - Epoch 2 Total Loss: 4.24653959274292, CV Loss: 0.38617271184921265, CM Loss: 1.9301834106445312
+2024-05-17 18:48:48,008 - Model - INFO - Epoch 2 Total Loss: 4.521786212921143, CV Loss: 0.6529967188835144, CM Loss: 1.9343948364257812
+2024-05-17 18:48:48,545 - Model - INFO - Epoch 2 Total Loss: 4.82719087600708, CV Loss: 0.9836545586585999, CM Loss: 1.9217681884765625
+2024-05-17 18:48:49,137 - Model - INFO - Epoch 2 Total Loss: 4.156555652618408, CV Loss: 0.33563295006752014, CM Loss: 1.91046142578125
+2024-05-17 18:48:49,790 - Model - INFO - Epoch 2 Total Loss: 4.519068717956543, CV Loss: 0.6943997740745544, CM Loss: 1.9123344421386719
+2024-05-17 18:48:50,384 - Model - INFO - Epoch 2 Total Loss: 4.514264106750488, CV Loss: 0.6894654035568237, CM Loss: 1.9123992919921875
+2024-05-17 18:48:50,922 - Model - INFO - Epoch 2 Total Loss: 4.321340560913086, CV Loss: 0.5012723207473755, CM Loss: 1.9100341796875
+2024-05-17 18:48:51,519 - Model - INFO - Epoch 2 Total Loss: 4.888435363769531, CV Loss: 1.0886305570602417, CM Loss: 1.89990234375
+2024-05-17 18:49:15,202 - Model - INFO - Epoch 2 Total Loss: 4.763418197631836, CV Loss: 0.9291744232177734, CM Loss: 1.9171218872070312
+2024-05-17 18:49:22,433 - Model - INFO - Epoch 2 Total Loss: 4.137995719909668, CV Loss: 0.30141717195510864, CM Loss: 1.9182891845703125
+2024-05-17 18:49:23,042 - Model - INFO - Epoch 2 Total Loss: 4.818808078765869, CV Loss: 0.9803375005722046, CM Loss: 1.9192352294921875
+2024-05-17 18:49:23,665 - Model - INFO - Epoch 2 Total Loss: 4.525696754455566, CV Loss: 0.718018651008606, CM Loss: 1.903839111328125
+2024-05-17 18:49:24,275 - Model - INFO - Epoch 2 Total Loss: 4.102354049682617, CV Loss: 0.28962501883506775, CM Loss: 1.9063644409179688
+2024-05-17 18:49:24,825 - Model - INFO - Epoch 2 Total Loss: 4.525536060333252, CV Loss: 0.702492356300354, CM Loss: 1.9115219116210938
+2024-05-17 18:49:25,485 - Model - INFO - Epoch 2 Total Loss: 4.123423099517822, CV Loss: 0.31997156143188477, CM Loss: 1.9017257690429688
+2024-05-17 18:49:26,096 - Model - INFO - Epoch 2 Total Loss: 4.138398170471191, CV Loss: 0.319535493850708, CM Loss: 1.9094314575195312
+2024-05-17 18:49:48,823 - Model - INFO - Epoch 2 Total Loss: 4.307436466217041, CV Loss: 0.47122424840927124, CM Loss: 1.9181060791015625
+2024-05-17 18:49:54,951 - Model - INFO - Epoch 2 Total Loss: 4.569799900054932, CV Loss: 0.7480074167251587, CM Loss: 1.9108963012695312
+2024-05-17 18:49:55,482 - Model - INFO - Epoch 2 Total Loss: 4.4599456787109375, CV Loss: 0.6315613985061646, CM Loss: 1.9141921997070312
+2024-05-17 18:49:56,861 - Model - INFO - Epoch 2 Total Loss: 4.236021995544434, CV Loss: 0.40071022510528564, CM Loss: 1.9176559448242188
+2024-05-17 18:49:57,458 - Model - INFO - Epoch 2 Total Loss: 4.399956226348877, CV Loss: 0.5832144618034363, CM Loss: 1.9083709716796875
+2024-05-17 18:49:57,974 - Model - INFO - Epoch 2 Total Loss: 4.458141803741455, CV Loss: 0.6420255303382874, CM Loss: 1.9080581665039062
+2024-05-17 18:49:58,596 - Model - INFO - Epoch 2 Total Loss: 4.632040023803711, CV Loss: 0.8298852443695068, CM Loss: 1.9010772705078125
+2024-05-17 18:49:59,160 - Model - INFO - Epoch 2 Total Loss: 4.508885860443115, CV Loss: 0.6957143545150757, CM Loss: 1.906585693359375
+2024-05-17 18:50:18,808 - Model - INFO - Epoch 2 Total Loss: 4.342878818511963, CV Loss: 0.5627580881118774, CM Loss: 1.8900604248046875
+2024-05-17 18:50:24,714 - Model - INFO - Epoch 2 Total Loss: 4.532924175262451, CV Loss: 0.6995806097984314, CM Loss: 1.9166717529296875
+2024-05-17 18:50:25,186 - Model - INFO - Epoch 2 Total Loss: 4.598166465759277, CV Loss: 0.7946693897247314, CM Loss: 1.9017486572265625
+2024-05-17 18:50:25,643 - Model - INFO - Epoch 2 Total Loss: 4.39274263381958, CV Loss: 0.5803495645523071, CM Loss: 1.9061965942382812
+2024-05-17 18:50:26,112 - Model - INFO - Epoch 2 Total Loss: 4.29726505279541, CV Loss: 0.45458316802978516, CM Loss: 1.9213409423828125
+2024-05-17 18:50:26,570 - Model - INFO - Epoch 2 Total Loss: 4.518599987030029, CV Loss: 0.7246547937393188, CM Loss: 1.89697265625
+2024-05-17 18:50:27,036 - Model - INFO - Epoch 2 Total Loss: 4.064199924468994, CV Loss: 0.2537292242050171, CM Loss: 1.9052352905273438
+2024-05-17 18:51:03,491 - Model - INFO - Epoch 2 CM Accuracy: 0.56
+2024-05-17 18:51:03,491 - Model - INFO - Epoch 2 CV Mean Pair Distance: Positive Pairs: 17.615215301513672, Negative Pairs: 21.448522567749023
+2024-05-17 18:51:03,492 - Model - INFO - Epoch 3 (3/100):
+2024-05-17 18:51:53,752 - Model - INFO - Epoch 3 Total Loss: 4.393533706665039, CV Loss: 0.5925848484039307, CM Loss: 1.9004745483398438
+2024-05-17 18:51:54,418 - Model - INFO - Epoch 3 Total Loss: 4.2324018478393555, CV Loss: 0.4392654299736023, CM Loss: 1.8965682983398438
+2024-05-17 18:51:55,184 - Model - INFO - Epoch 3 Total Loss: 4.2541728019714355, CV Loss: 0.46858930587768555, CM Loss: 1.892791748046875
+2024-05-17 18:51:55,810 - Model - INFO - Epoch 3 Total Loss: 4.6288604736328125, CV Loss: 0.8272097110748291, CM Loss: 1.9008255004882812
+2024-05-17 18:51:56,376 - Model - INFO - Epoch 3 Total Loss: 4.163229942321777, CV Loss: 0.3906469941139221, CM Loss: 1.88629150390625
+2024-05-17 18:51:57,017 - Model - INFO - Epoch 3 Total Loss: 4.514679431915283, CV Loss: 0.7329413294792175, CM Loss: 1.890869140625
+2024-05-17 18:51:57,535 - Model - INFO - Epoch 3 Total Loss: 4.522171497344971, CV Loss: 0.7039035558700562, CM Loss: 1.9091339111328125
+2024-05-17 18:51:58,178 - Model - INFO - Epoch 3 Total Loss: 4.351257801055908, CV Loss: 0.5273593664169312, CM Loss: 1.9119491577148438
+2024-05-17 18:52:32,346 - Model - INFO - Epoch 3 Total Loss: 4.186147212982178, CV Loss: 0.39548248052597046, CM Loss: 1.8953323364257812
+2024-05-17 18:52:32,939 - Model - INFO - Epoch 3 Total Loss: 4.267091274261475, CV Loss: 0.4757857918739319, CM Loss: 1.8956527709960938
+2024-05-17 18:52:33,568 - Model - INFO - Epoch 3 Total Loss: 4.573620796203613, CV Loss: 0.7614412903785706, CM Loss: 1.9060897827148438
+2024-05-17 18:52:34,214 - Model - INFO - Epoch 3 Total Loss: 4.226673126220703, CV Loss: 0.46171969175338745, CM Loss: 1.882476806640625
+2024-05-17 18:52:34,937 - Model - INFO - Epoch 3 Total Loss: 4.625027656555176, CV Loss: 0.8047763705253601, CM Loss: 1.910125732421875
+2024-05-17 18:52:35,534 - Model - INFO - Epoch 3 Total Loss: 4.124433517456055, CV Loss: 0.3279247283935547, CM Loss: 1.89825439453125
+2024-05-17 18:52:36,145 - Model - INFO - Epoch 3 Total Loss: 4.22001838684082, CV Loss: 0.4351520240306854, CM Loss: 1.8924331665039062
+2024-05-17 18:52:37,845 - Model - INFO - Epoch 3 Total Loss: 4.4083147048950195, CV Loss: 0.610249400138855, CM Loss: 1.8990325927734375
+2024-05-17 18:53:14,947 - Model - INFO - Epoch 3 Total Loss: 4.279963493347168, CV Loss: 0.4942120313644409, CM Loss: 1.8928756713867188
+2024-05-17 18:54:23,882 - Model - INFO - Epoch 3 Total Loss: 4.3054070472717285, CV Loss: 0.5116906762123108, CM Loss: 1.8968582153320312
+2024-05-17 18:54:24,376 - Model - INFO - Epoch 3 Total Loss: 4.391874313354492, CV Loss: 0.6451089382171631, CM Loss: 1.873382568359375
+2024-05-17 18:54:24,872 - Model - INFO - Epoch 3 Total Loss: 4.2741594314575195, CV Loss: 0.48216718435287476, CM Loss: 1.89599609375
+2024-05-17 18:54:25,368 - Model - INFO - Epoch 3 Total Loss: 3.9090397357940674, CV Loss: 0.12379187345504761, CM Loss: 1.8926239013671875
+2024-05-17 18:54:25,874 - Model - INFO - Epoch 3 Total Loss: 4.681415557861328, CV Loss: 0.9079627394676208, CM Loss: 1.8867263793945312
+2024-05-17 18:54:26,382 - Model - INFO - Epoch 3 Total Loss: 3.953277587890625, CV Loss: 0.16130071878433228, CM Loss: 1.8959884643554688
+2024-05-17 18:54:26,867 - Model - INFO - Epoch 3 Total Loss: 3.970775842666626, CV Loss: 0.22016555070877075, CM Loss: 1.87530517578125
+2024-05-17 18:54:27,376 - Model - INFO - Epoch 3 Total Loss: 4.063746452331543, CV Loss: 0.27317333221435547, CM Loss: 1.8952865600585938
+2024-05-17 18:54:27,826 - Model - INFO - Epoch 3 Total Loss: 4.274809837341309, CV Loss: 0.4727011024951935, CM Loss: 1.9010543823242188
+2024-05-17 18:54:28,332 - Model - INFO - Epoch 3 Total Loss: 4.310821533203125, CV Loss: 0.507308840751648, CM Loss: 1.9017562866210938
+2024-05-17 18:54:28,833 - Model - INFO - Epoch 3 Total Loss: 4.805310249328613, CV Loss: 1.0172855854034424, CM Loss: 1.894012451171875
+2024-05-17 18:54:29,340 - Model - INFO - Epoch 3 Total Loss: 4.312052249908447, CV Loss: 0.5493110418319702, CM Loss: 1.8813705444335938
+2024-05-17 18:54:29,826 - Model - INFO - Epoch 3 Total Loss: 4.01776123046875, CV Loss: 0.28323352336883545, CM Loss: 1.8672637939453125
+2024-05-17 18:54:30,323 - Model - INFO - Epoch 3 Total Loss: 4.543655872344971, CV Loss: 0.742142379283905, CM Loss: 1.9007568359375
