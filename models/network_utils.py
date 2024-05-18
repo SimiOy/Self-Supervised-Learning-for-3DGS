@@ -47,9 +47,8 @@ def evaluate_model(point_model, image_model, dataloader):
     negative_distances = []
 
     with torch.no_grad():
-        # TODO: Change Here
         # ends up with 10 times test data size with half positive and half negative pairs
-        for _ in range(3):
+        for _ in range(5):
             for batch_id, (points, img1, img2, img3, y1, y2, y3) in enumerate(dataloader):
                 points = points.transpose(2, 1)
                 if torch.cuda.is_available():
