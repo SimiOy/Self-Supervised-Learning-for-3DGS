@@ -15,7 +15,6 @@ from pathlib import Path
 import torch
 import torch.nn as nn
 import torchvision.models as models
-from torchvision.models import ResNet18_Weights
 from tqdm import tqdm
 
 from data_loader import ModelNetDataLoader
@@ -37,26 +36,25 @@ def parse_args():
     # Model params
     parser.add_argument('--model', default='pointnet_cls', help='model name [default: pointnet_cls]')
     parser.add_argument('--beta', type=float, default=3.0, help='weight for the cross-modality loss')
+    parser.add_argument('--log_dir', type=str, default=None, help='experiment root')
     parser.add_argument('--batch_size', type=int, default=32, help='batch size in training')
     parser.add_argument('--num_workers', type=int, default=8, help='number of data loader workers')
     parser.add_argument('--num_iterations', default=60000, type=int, help='number of iterations in training')
     parser.add_argument('--epoch', default=100, type=int, help='number of epoch in training')
-    parser.add_argument('--learning_rate', default=0.005, type=float, help='learning rate in training')
     parser.add_argument('--optimizer', type=str, default='SGD', help='optimizer for training')
-    parser.add_argument('--momentum', type=float, default=0.9, help='momentum for SGD')  # Momentum for SGD
-    parser.add_argument('--weight_decay', type=float, default=0.0005,
-                        help='weight decay for SGD')  # Weight decay for SGD
-    parser.add_argument('--log_dir', type=str, default=None, help='experiment root')
-    parser.add_argument('--decay_steps', type=int, default=10000,
-                        help='decay steps for learning rate')  # Decay every 10,000 steps
-    parser.add_argument('--decay_rate', type=float, default=0.1, help='decay rate for learning rate')
+    # Optimizers
+    parser.add_argument('--learning_rate', default=0.001, type=float, help='learning rate in training')
+    parser.add_argument('--momentum', type=float, default=0.9, help='momentum for SGD')
+    parser.add_argument('--weight_decay', type=float, default=0.0005, help='weight decay for SGD')
+    parser.add_argument('--decay_steps', type=int, default=100, help='decay steps for learning rate')
+    parser.add_argument('--decay_rate', type=float, default=0.9, help='decay rate for learning rate')
 
     # Data Loader Args
     parser.add_argument('--num_point', type=int, default=2048, help='Point Number')
     parser.add_argument('--use_normals', action='store_true', default=False, help='use normals')
     parser.add_argument('--use_scale_and_rotation', action='store_true', default=True, help='use scale and rotation')
     parser.add_argument('--use_colors', action='store_true', default=False, help='use colors')
-    parser.add_argument('--furthest_point_sample', action='store_true', default=True,
+    parser.add_argument('--furthest_point_sample', action='store_true', default=False,
                         help='use furthest point sampling')
 
     return parser.parse_args()
@@ -127,8 +125,8 @@ def main(args):
     pointnet.apply(inplace_relu)
 
     # use pretrained model?
-    resnet18 = models.resnet18(weights=ResNet18_Weights.IMAGENET1K_V1)
-    # resnet18 = models.resnet18()
+    # resnet18 = models.resnet18(weights=ResNet18_Weights.IMAGENET1K_V1)
+    resnet18 = models.resnet18()
     resnet18.fc = nn.Identity()  # Remove the last fully connected layer
 
     fusion_network = FeatureFusionNetwork()
@@ -167,7 +165,7 @@ def main(args):
 
     scaler = torch.cuda.amp.GradScaler()
     global_step = 0
-    triplet_loss = nn.TripletMarginLoss(margin=1.0)
+    triplet_loss = nn.TripletMarginLoss(margin=2.0)
     cross_entropy_loss = nn.CrossEntropyLoss()
 
     '''TRANING'''
