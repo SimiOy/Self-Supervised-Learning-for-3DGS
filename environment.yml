@@ -1,12 +1,11 @@
 name: CV3dgs
 channels:
   - pytorch
-  - nvidia
   - conda-forge
   - defaults
 dependencies:
   - python=3.7.13
-  - open3d
+  - plyfile=0.8.1
   - pyntcloud
   - pip=22.3.1
   - pytorch=1.12.1
@@ -15,3 +14,5 @@ dependencies:
   - cudatoolkit=11.6
   - pillow
   - tqdm
+  - pip:
+      - open3d

@@ -46,12 +46,13 @@ def parse_args():
     parser.add_argument('--learning_rate', default=0.001, type=float, help='learning rate in training')
     parser.add_argument('--momentum', type=float, default=0.9, help='momentum for SGD')
     parser.add_argument('--weight_decay', type=float, default=0.0005, help='weight decay for SGD')
-    parser.add_argument('--decay_steps', type=int, default=100, help='decay steps for learning rate')
+    parser.add_argument('--decay_steps', type=int, default=250, help='decay steps for learning rate')
     parser.add_argument('--decay_rate', type=float, default=0.9, help='decay rate for learning rate')
 
     # Data Loader Args
     parser.add_argument('--point_dir', type=str, required=True, help='3D Gaussian Splats Dir')
     parser.add_argument('--img_dir', type=str, required=True, help='Renders/Images Dir')
+    parser.add_argument('--num_workers', type=int, default=8, help='Data Loader workers')
     parser.add_argument('--num_point', type=int, default=2048, help='Point Number')
     parser.add_argument('--use_normals', action='store_true', default=False, help='use normals')
     parser.add_argument('--use_scale_and_rotation', action='store_true', default=True, help='use scale and rotation')
@@ -104,9 +105,9 @@ def main(args):
     train_dataset = ModelNetDataLoader(point_dir=args.point_dir, img_dir=args.img_dir, args=args, split='train')
     test_dataset = ModelNetDataLoader(point_dir=args.point_dir, img_dir=args.img_dir, args=args, split='test')
     trainDataLoader = torch.utils.data.DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True,
-                                                  num_workers=8, drop_last=True)
-    testDataLoader = torch.utils.data.DataLoader(test_dataset, batch_size=args.batch_size, shuffle=True,
-                                                 num_workers=8)
+                                                  num_workers=args.num_workers, drop_last=True)
+    testDataLoader = torch.utils.data.DataLoader(test_dataset, batch_size=args.batch_size, shuffle=False,
+                                                 num_workers=args.num_workers)
 
     '''MODEL LOADING'''
     pointnet_model = importlib.import_module(args.model)
