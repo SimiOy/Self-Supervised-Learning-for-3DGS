@@ -228,12 +228,24 @@ def main(args):
         log_string(
             f'Epoch {epoch + 1} CV Mean Pair Distance: Positive Pairs: {mpd_positive}, Negative Pairs: {mpd_negative}')
 
+        # Save the model checkpoint every 10 epochs
+        if (epoch + 1) % 10 == 0:
+            checkpoint_path = str(checkpoints_dir) + f'/checkpoint_epoch_{epoch + 1}.pth'
+            torch.save({
+                'epoch': epoch + 1,
+                'pointnet_state_dict': pointnet.state_dict(),
+                'resnet18_state_dict': resnet18.state_dict(),
+                'fusion_network_state_dict': fusion_network.state_dict(),
+                'optimizer_state_dict': optimizer.state_dict(),
+            }, checkpoint_path)
+            log_string(f'Saved checkpoint: {checkpoint_path}')
+
         if global_step >= args.num_iterations:
             break
 
     logger.info('End of training...')
     torch.save({
-        'epoch': epoch,
+        'epoch': epoch + 1,
         'pointnet_state_dict': pointnet.state_dict(),
         'resnet18_state_dict': resnet18.state_dict(),
         'fusion_network_state_dict': fusion_network.state_dict(),
