@@ -52,21 +52,20 @@ def parse_args():
     # Data Loader Args
     parser.add_argument('--point_dir', type=str, required=True, help='3D Gaussian Splats Dir')
     parser.add_argument('--img_dir', type=str, required=True, help='Renders/Images Dir')
-    parser.add_argument('--num_workers', type=int, default=8, help='Data Loader workers')
     parser.add_argument('--num_point', type=int, default=2048, help='Point Number')
-    parser.add_argument('--use_normals', action='store_true', default=False, help='use normals')
-    parser.add_argument('--use_scale_and_rotation', action='store_true', default=True, help='use scale and rotation')
-    parser.add_argument('--use_colors', action='store_true', default=False, help='use colors')
-    parser.add_argument('--furthest_point_sample', action='store_true', default=True,
-                        help='use furthest point sampling')
+    parser.add_argument('--use_normals', action='store_true', help='use normals')
+    parser.add_argument('--use_scale_and_rotation', action='store_true', help='use scale and rotation')
+    parser.add_argument('--use_colors', action='store_true', help='use colors')
+    parser.add_argument('--furthest_point_sample', action='store_true', help='use furthest point sampling')
 
     return parser.parse_args()
 
 
 def main(args):
-    def log_string(str):
+    def log_string(str, out=False):
         logger.info(str)
-        print(str)
+        if out:
+            print(str, flush=True)
 
     '''HYPER PARAMETER'''
     os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
@@ -174,7 +173,7 @@ def main(args):
     '''TRANING'''
     logger.info('Start training...')
     for epoch in range(start_epoch, args.epoch):
-        log_string(f'Epoch {epoch + 1} ({epoch + 1}/{args.epoch}):')
+        log_string(f'Epoch {epoch + 1} ({epoch + 1}/{args.epoch}):', out=True)
         pointnet.train()
         resnet18.train()
         fusion_network.train()
@@ -223,14 +222,16 @@ def main(args):
                        f'CV Loss: {L_triplet.item()}, CM Loss: {L_cross.item()}')
 
         # Evaluate model on test set
-        cm_accuracy, mpd_positive, mpd_negative = evaluate_model(pointnet, resnet18, testDataLoader)
+        log_string(f'Started evaluation:', out=True)
+        cm_accuracy, mpd_positive, mpd_negative = evaluate_model(pointnet, resnet18, testDataLoader, num_repeat=1)
 
-        log_string(f'Epoch {epoch + 1} CM Accuracy: {cm_accuracy}')
+        log_string(f'Epoch {epoch + 1} CM Accuracy: {cm_accuracy}', out=True)
         log_string(
-            f'Epoch {epoch + 1} CV Mean Pair Distance: Positive Pairs: {mpd_positive}, Negative Pairs: {mpd_negative}')
+            f'Epoch {epoch + 1} CV Mean Pair Distance: Positive Pairs: {mpd_positive}, Negative Pairs: {mpd_negative}',
+            out=True)
 
-        # Save the model checkpoint every 10 epochs
-        if (epoch + 1) % 10 == 0:
+        # Save the model checkpoint every 5 epochs
+        if (epoch + 1) % 5 == 0:
             checkpoint_path = str(checkpoints_dir) + f'/checkpoint_epoch_{epoch + 1}.pth'
             torch.save({
                 'epoch': epoch + 1,
@@ -239,7 +240,7 @@ def main(args):
                 'fusion_network_state_dict': fusion_network.state_dict(),
                 'optimizer_state_dict': optimizer.state_dict(),
             }, checkpoint_path)
-            log_string(f'Saved checkpoint: {checkpoint_path}')
+            log_string(f'Saved checkpoint: {checkpoint_path}', out=True)
 
         if global_step >= args.num_iterations:
             break
@@ -252,6 +253,15 @@ def main(args):
         'fusion_network_state_dict': fusion_network.state_dict(),
         'optimizer_state_dict': optimizer.state_dict(),
     }, str(checkpoints_dir) + '/best_model.pth')
+
+    # Evaluate model on test set
+    log_string(f'Started evaluation:', out=True)
+    cm_accuracy, mpd_positive, mpd_negative = evaluate_model(pointnet, resnet18, testDataLoader, num_repeat=5)
+
+    log_string(f'Epoch {epoch + 1} CM Accuracy: {cm_accuracy}', out=True)
+    log_string(
+        f'Epoch {epoch + 1} CV Mean Pair Distance: Positive Pairs: {mpd_positive}, Negative Pairs: {mpd_negative}',
+        out=True)
 
 
 if __name__ == '__main__':

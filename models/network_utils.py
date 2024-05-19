@@ -2,6 +2,7 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 from torch import nn
+from tqdm import tqdm
 
 
 def inplace_relu(m):
@@ -37,7 +38,7 @@ class CustomLRScheduler:
                 param_group['lr'] *= self.decay_rate
 
 
-def evaluate_model(point_model, image_model, dataloader):
+def evaluate_model(point_model, image_model, dataloader, num_repeat=5):
     point_model.eval()
     image_model.eval()
 
@@ -48,8 +49,9 @@ def evaluate_model(point_model, image_model, dataloader):
 
     with torch.no_grad():
         # ends up with 10 times test data size with half positive and half negative pairs
-        for _ in range(5):
-            for batch_id, (points, img1, img2, img3, y1, y2, y3) in enumerate(dataloader):
+        for _ in range(num_repeat):
+            for batch_id, (points, img1, img2, img3, y1, y2, y3) in tqdm(enumerate(dataloader, 0),
+                                                                         total=len(dataloader), smoothing=0.9):
                 points = points.transpose(2, 1)
                 if torch.cuda.is_available():
                     points, img1, img2, img3 = points.cuda(), img1.cuda(), img2.cuda(), img3.cuda()
