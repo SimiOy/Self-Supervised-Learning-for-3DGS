@@ -38,7 +38,7 @@ class CustomLRScheduler:
                 param_group['lr'] *= self.decay_rate
 
 
-def evaluate_model(point_model, image_model, dataloader, num_repeat=5):
+def evaluate_model(point_model, image_model, fusion_network, dataloader, num_repeat=5):
     point_model.eval()
     image_model.eval()
 
@@ -62,16 +62,17 @@ def evaluate_model(point_model, image_model, dataloader, num_repeat=5):
                 fi2 = image_model(img2)  # positive
                 fi3 = image_model(img3)  # negative
 
+                hat_y1 = fusion_network(fi1, fp)
+                hat_y2 = fusion_network(fi2, fp)
+                hat_y3 = fusion_network(fi3, fp)
+
                 # Cross-Modality Correspondence (CM)
-                dist1 = torch.norm(fp - fi1, dim=1)
-                dist2 = torch.norm(fp - fi2, dim=1)
-                dist3 = torch.norm(fp - fi3, dim=1)
+                pred1 = torch.argmax(hat_y1, dim=1)
+                pred2 = torch.argmax(hat_y2, dim=1)
+                pred3 = torch.argmax(hat_y3, dim=1)
 
-                pred1 = (dist1 < dist3).float()
-                pred2 = (dist2 < dist3).float()
-
-                cm_correct += ((pred1 == y1).sum() + (pred2 == y2).sum()).item()
-                cm_total += len(y1) + len(y2)
+                cm_correct += ((pred1 == y1).sum() + (pred2 == y2).sum() + (pred3 == y3).sum()).item()
+                cm_total += len(y1) + len(y2) + len(y3)
 
                 # Cross-View Correspondence (CV)
                 positive_distance = torch.norm(fi1 - fi2, dim=1)
