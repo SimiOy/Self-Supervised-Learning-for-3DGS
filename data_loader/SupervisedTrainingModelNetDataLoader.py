@@ -84,7 +84,7 @@ class SupervisedTrainingModelNetDataLoader(Dataset):
         if self.fps:
             sampled_properties = farthest_point_sample(properties, self.num_points)
         else:
-            indices = np.random.choice(len(properties), self.num_points, replace=False)
+            indices = np.random.choice(len(properties), self.num_points)
             sampled_properties = properties[indices]
 
         # normalize position of points
