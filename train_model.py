@@ -178,8 +178,8 @@ def main(args):
         resnet18.train()
         fusion_network.train()
 
-        for batch_id, (points, img1, img2, img3, y1, y2, y3) in tqdm(enumerate(trainDataLoader, 0),
-                                                                     total=len(trainDataLoader), smoothing=0.9):
+        for batch_id, (points, img1, img2, img3, y1, y2, y3, _) in tqdm(enumerate(trainDataLoader, 0),
+                                                                        total=len(trainDataLoader), smoothing=0.9):
             if global_step >= args.num_iterations:
                 break
 
@@ -223,7 +223,8 @@ def main(args):
 
         # Evaluate model on test set
         log_string(f'Started evaluation:', out=True)
-        cm_accuracy, mpd_positive, mpd_negative = evaluate_model(pointnet, resnet18, fusion_network, testDataLoader, num_repeat=1)
+        cm_accuracy, mpd_positive, mpd_negative = evaluate_model(pointnet, resnet18, fusion_network, testDataLoader,
+                                                                 num_repeat=1)
 
         log_string(f'Epoch {epoch + 1} CM Accuracy: {cm_accuracy}', out=True)
         log_string(
@@ -256,7 +257,8 @@ def main(args):
 
     # Evaluate model on test set
     log_string(f'Started evaluation:', out=True)
-    cm_accuracy, mpd_positive, mpd_negative = evaluate_model(pointnet, resnet18, fusion_network, testDataLoader, num_repeat=5)
+    cm_accuracy, mpd_positive, mpd_negative = evaluate_model(pointnet, resnet18, fusion_network, testDataLoader,
+                                                             num_repeat=5)
 
     log_string(f'Epoch {epoch + 1} CM Accuracy: {cm_accuracy}', out=True)
     log_string(

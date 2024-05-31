@@ -1,1 +1,2 @@
 from .ModelNetDataLoader import ModelNetDataLoader
+from .SupervisedTrainingModelNetDataLoader import SupervisedTrainingModelNetDataLoader

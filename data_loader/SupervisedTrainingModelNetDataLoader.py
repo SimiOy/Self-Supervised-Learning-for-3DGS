@@ -12,14 +12,15 @@ from torchvision import transforms
 from data_loader.dataloader_utils import farthest_point_sample, pc_normalize
 
 
-class ModelNetDataLoader(Dataset):
-    def __init__(self, point_dir, img_dir, args, split='train', opacity_threshold=0.3):
+class SupervisedTrainingModelNetDataLoader(Dataset):
+    def __init__(self, point_dir, img_dir, args, split='train', opacity_threshold=0.3, num_views=1):
         self.num_points = args.num_point
         self.fps = args.furthest_point_sample
         self.use_normals = args.use_normals
         self.use_colors = args.use_colors
         self.use_sr = args.use_scale_and_rotation
         self.opacity_threshold = opacity_threshold
+        self.num_views = num_views
 
         # TODO: Use the model_path from the cfg_args of each model instead
         assert split in ['train', 'test']
@@ -91,24 +92,11 @@ class ModelNetDataLoader(Dataset):
 
         # Load images
         img_dir, cls_name = self.img_paths[model_name]
-        img_indices = np.random.choice(64, 2, replace=False)
-        img1_path = os.path.join(img_dir, f'{img_indices[0]:03}.png')
-        img2_path = os.path.join(img_dir, f'{img_indices[1]:03}.png')
+        img_indices = np.random.choice(64, self.num_views, replace=False)
+        imgs = [self.transform(Image.open(os.path.join(img_dir, f'{idx:03}.png')).convert('RGB')) for idx in
+                img_indices]
 
-        other_models = [name for name in self.img_paths.keys() if name != model_name]
-        other_model_name = np.random.choice(other_models)
-        img3_dir, _ = self.img_paths[other_model_name]
-        img3_path = os.path.join(img3_dir, f'{np.random.randint(0, 64):03}.png')
-
-        img1 = self.transform(Image.open(img1_path).convert('RGB'))
-        img2 = self.transform(Image.open(img2_path).convert('RGB'))
-        img3 = self.transform(Image.open(img3_path).convert('RGB'))
-
-        y1, y2, y3 = torch.tensor([1, 1, 0])
-        # cls = classes[cls_name]
-        # cls = np.array([cls]).astype(np.int32)[0]
-
-        return sampled_properties, img1, img2, img3, y1, y2, y3, cls_name
+        return sampled_properties, imgs, cls_name
 
     def _get_latest_point_cloud_path(self, model_path):
         """Finds the path of the latest point cloud by iteration number."""
@@ -137,22 +125,3 @@ class ModelNetDataLoader(Dataset):
         pcd = o3d.geometry.PointCloud()
         pcd.points = o3d.utility.Vector3dVector(point_cloud[:, 0:3])
         o3d.visualization.draw_geometries([pcd])
-
-
-class Config:
-    def __init__(self, num_point=2048, use_normals=False, use_scale_and_rotation=True, use_colors=False,
-                 furthest_point_sample=False):
-        self.num_point = num_point
-        self.use_normals = use_normals
-        self.use_colors = use_colors
-        self.use_scale_and_rotation = use_scale_and_rotation
-        self.furthest_point_sample = furthest_point_sample
-
-
-if __name__ == '__main__':
-    config = Config(num_point=4096, furthest_point_sample=True, use_normals=False)
-    # Usage example:
-    point_dir = 'C:/Gaussian-Splatting/gaussian-splatting/output/modelNet10/'
-    img_dir = 'C:/ResearchProject/datasets/modelnet10/ModelNet10_captures'
-    dataset = ModelNetDataLoader(point_dir, img_dir, config)
-    dataset.visualize_point_cloud(515)

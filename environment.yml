@@ -14,5 +14,7 @@ dependencies:
   - cudatoolkit=11.6
   - pillow
   - tqdm
+  - scikit-learn
+  - matplotlib
   - pip:
       - open3d
