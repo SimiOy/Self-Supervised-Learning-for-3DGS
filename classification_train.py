@@ -54,7 +54,7 @@ def parse_args():
     parser.add_argument('--log_dir', type=str, default=None, help='experiment root')
     parser.add_argument('--batch_size', type=int, default=32, help='batch size in training')
     parser.add_argument('--num_workers', type=int, default=8, help='number of data loader workers')
-    parser.add_argument('--num_views', type=int, default=1, help='number of distinct views')
+    parser.add_argument('--num_views', nargs='+', type=int, required=True, help='space-separated number of views')
 
     # Data Loader Args
     parser.add_argument('--point_dir', type=str, required=True, help='3D Gaussian Splats Dir')
@@ -126,8 +126,8 @@ def train_svm(features, labels):
 
 if __name__ == '__main__':
     args = parse_args()
-    os.environ["CUDA_VISIBLE_DEVICES"] = '0'
     config = read_config(args.log_dir)
+    os.environ["CUDA_VISIBLE_DEVICES"] = '0'
 
     '''ACCESS LOG DIR'''
     exp_dir = Path('./log/')
@@ -136,15 +136,6 @@ if __name__ == '__main__':
     '''DATA LOADING'''
     data_loader_config = Config(config['num_point'], config['use_normals'], config['use_scale_and_rotation'],
                                 config['use_colors'], config['furthest_point_sample'])
-    train_dataset = SupervisedTrainingModelNetDataLoader(point_dir=args.point_dir, img_dir=args.img_dir,
-                                                         args=data_loader_config, split='train',
-                                                         num_views=args.num_views)
-    test_dataset = SupervisedTrainingModelNetDataLoader(point_dir=args.point_dir, img_dir=args.img_dir,
-                                                        args=data_loader_config, split='test', num_views=args.num_views)
-    trainDataLoader = torch.utils.data.DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True,
-                                                  num_workers=args.num_workers, drop_last=True)
-    testDataLoader = torch.utils.data.DataLoader(test_dataset, batch_size=args.batch_size, shuffle=False,
-                                                 num_workers=args.num_workers)
 
     '''MODEL LOADING'''
     pointnet_model = importlib.import_module(config['model'])
@@ -171,20 +162,34 @@ if __name__ == '__main__':
     pointnet.eval()
     resnet18.eval()
 
-    # Feature extraction for training data
-    train_point_features, train_image_features, train_labels = extract_features(trainDataLoader, pointnet, resnet18)
+    for num_views in args.num_views:
+        print(f"Processing with num_views = {num_views}", flush=True)
 
-    # Train SVMs
-    svm_point = train_svm(train_point_features, train_labels)
-    svm_image = train_svm(train_image_features, train_labels)
-    print("SVMs trained.")
+        train_dataset = SupervisedTrainingModelNetDataLoader(point_dir=args.point_dir, img_dir=args.img_dir,
+                                                             args=data_loader_config, split='train',
+                                                             num_views=num_views)
+        test_dataset = SupervisedTrainingModelNetDataLoader(point_dir=args.point_dir, img_dir=args.img_dir,
+                                                            args=data_loader_config, split='test',
+                                                            num_views=num_views)
+        trainDataLoader = torch.utils.data.DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True,
+                                                      num_workers=args.num_workers, drop_last=True)
+        testDataLoader = torch.utils.data.DataLoader(test_dataset, batch_size=args.batch_size, shuffle=False,
+                                                     num_workers=args.num_workers)
 
-    # Feature extraction for test data
-    test_point_features, test_image_features, test_labels = extract_features(testDataLoader, pointnet, resnet18)
+        # Feature extraction for training data
+        train_point_features, train_image_features, train_labels = extract_features(trainDataLoader, pointnet, resnet18)
 
-    # Evaluating SVMs
-    point_predictions = svm_point.predict(test_point_features)
-    image_predictions = svm_image.predict(test_image_features)
+        # Train SVMs
+        svm_point = train_svm(train_point_features, train_labels)
+        svm_image = train_svm(train_image_features, train_labels)
 
-    print("Point-based SVM Accuracy:", accuracy_score(test_labels, point_predictions))
-    print("Image-based SVM Accuracy:", accuracy_score(test_labels, image_predictions))
+        # Feature extraction for test data
+        test_point_features, test_image_features, test_labels = extract_features(testDataLoader, pointnet, resnet18)
+
+        # Evaluating SVMs
+        point_predictions = svm_point.predict(test_point_features)
+        image_predictions = svm_image.predict(test_image_features)
+
+        print(f"Results for num_views = {num_views}", flush=True)
+        print("Point-based SVM Accuracy:", accuracy_score(test_labels, point_predictions), flush=True)
+        print("Image-based SVM Accuracy:", accuracy_score(test_labels, image_predictions), flush=True)

@@ -20,7 +20,7 @@ sys.path.append(os.path.join(ROOT_DIR, 'models'))
 
 point_dir = 'C:/Gaussian-Splatting/gaussian-splatting/output/modelNet10/'
 img_dir = 'C:/ResearchProject/datasets/modelnet10/ModelNet10_captures'
-log_dir = 'uniform_plus_only_point'
+log_dir = 'pointnet_plus_only_points'
 batch_size = 32
 num_workers = 8
 num_views = 32

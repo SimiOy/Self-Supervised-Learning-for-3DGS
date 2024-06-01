@@ -34,19 +34,10 @@ class SupervisedTrainingModelNetDataLoader(Dataset):
                           for class_name in os.listdir(img_dir)
                           for model_name in os.listdir(os.path.join(img_dir, class_name, split))}
 
-        # Data Augmentation during Training
-        train_transform = transforms.Compose([
-            transforms.RandomResizedCrop(size=(224, 224)),
-            transforms.RandomHorizontalFlip(p=0.5),
-            transforms.ToTensor()
-        ])
-
-        test_transform = transforms.Compose([
+        self.transform = transforms.Compose([
             transforms.Resize(size=(224, 224)),
             transforms.ToTensor()
         ])
-
-        self.transform = train_transform if split == 'train' else test_transform
 
     def __len__(self):
         return len(self.model_paths)
