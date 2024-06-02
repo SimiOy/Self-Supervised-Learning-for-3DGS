@@ -1,6 +1,7 @@
 import argparse
 import importlib
 import os
+import pickle
 import sys
 from pathlib import Path
 
@@ -14,6 +15,12 @@ from tqdm import tqdm
 
 from data_loader import SupervisedTrainingModelNetDataLoader
 from data_loader.ModelNetDataLoader import Config
+
+plt.rcParams.update({
+    'text.usetex': True,
+    'font.family': 'serif',
+    'font.size': 22
+})
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = BASE_DIR
@@ -43,6 +50,8 @@ classes = {
 def parse_args():
     '''PARAMETERS'''
     parser = argparse.ArgumentParser('training')
+    parser.add_argument('--plot', action='store_true', default=False, help='compute or plot TSNE values')
+
     # Architecture
     parser.add_argument('--use_cpu', action='store_true', default=False, help='use cpu mode')
     parser.add_argument('--gpu', type=str, default='0', help='specify gpu device')
@@ -90,6 +99,17 @@ def read_config(log_dir):
                         config_dict[key] = value.strip("'").strip('"')
                 return config_dict
     raise FileNotFoundError("No configuration file found in the specified directory.")
+
+
+def save_features(data, file_name):
+    with open(file_name, 'wb') as f:
+        pickle.dump(data, f)
+    print(f"Features saved to {file_name}")
+
+
+def load_features(file_name):
+    with open(file_name, 'rb') as f:
+        return pickle.load(f)
 
 
 def plot_tsne(features, labels, title, name):
@@ -147,42 +167,55 @@ def main():
 
     for num_views in args.num_views:
         print(f"Processing TSNE with num_views = {num_views}", flush=True)
+        feature_path_point = exp_dir / 'Gaussian_cloud_feature_embeddings.pkl'
+        feature_path_image = exp_dir / f'Distinct_{num_views}_views_feature_embeddings.pkl'
 
-        train_dataset = SupervisedTrainingModelNetDataLoader(point_dir=args.point_dir, img_dir=args.img_dir,
-                                                             args=data_loader_config, split='train',
-                                                             num_views=num_views)
-        test_dataset = SupervisedTrainingModelNetDataLoader(point_dir=args.point_dir, img_dir=args.img_dir,
-                                                            args=data_loader_config, split='test',
-                                                            num_views=num_views)
-        trainDataLoader = torch.utils.data.DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True,
-                                                      num_workers=args.num_workers, drop_last=True)
-        testDataLoader = torch.utils.data.DataLoader(test_dataset, batch_size=args.batch_size, shuffle=False,
-                                                     num_workers=args.num_workers)
+        if args.plot:
+            if feature_path_point.exists() and feature_path_image.exists():
+                point_features, labels = load_features(feature_path_point)
+                image_features, _ = load_features(feature_path_image)
 
-        point_features, image_features, labels = [], [], []
+                plot_tsne(point_features, labels, 'Gaussian Cloud feature embeddings',
+                          f'Gaussian_cloud_feature_embeddings_{args.log_dir}')
+                plot_tsne(image_features, labels, f'Distinct {num_views} views feature embeddings',
+                          f'Distinct_{num_views}_views_feature_embeddings_{args.log_dir}')
+            else:
+                print(f"Feature files not found for {num_views} views.")
+        else:
+            train_dataset = SupervisedTrainingModelNetDataLoader(point_dir=args.point_dir, img_dir=args.img_dir,
+                                                                 args=data_loader_config, split='train',
+                                                                 num_views=num_views)
+            test_dataset = SupervisedTrainingModelNetDataLoader(point_dir=args.point_dir, img_dir=args.img_dir,
+                                                                args=data_loader_config, split='test',
+                                                                num_views=num_views)
+            trainDataLoader = torch.utils.data.DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True,
+                                                          num_workers=args.num_workers, drop_last=True)
+            testDataLoader = torch.utils.data.DataLoader(test_dataset, batch_size=args.batch_size, shuffle=False,
+                                                         num_workers=args.num_workers)
 
-        with torch.no_grad():
-            for batch_id, (points, imgs, cls_name) in tqdm(enumerate(trainDataLoader, 0), total=len(trainDataLoader)):
-                points = points.transpose(2, 1).cuda()
-                fp, _ = pointnet(points)
-                point_features.append(fp.cpu().numpy())
+            point_features, image_features, labels = [], [], []
 
-                # Max pooling across the view features
-                # Have to move to CPU and to NumPy for SVM ScikitLearn to work
-                img_features = [resnet18(img.cuda()).cpu().numpy() for img in imgs]
-                max_pooled_features = np.max(np.stack(img_features), axis=0)
-                image_features.append(max_pooled_features)
+            with torch.no_grad():
+                for batch_id, (points, imgs, cls_name) in tqdm(enumerate(trainDataLoader, 0),
+                                                               total=len(trainDataLoader)):
+                    points = points.transpose(2, 1).cuda()
+                    fp, _ = pointnet(points)
+                    point_features.append(fp.cpu().numpy())
 
-                labels.append(cls_name)
+                    # Max pooling across the view features
+                    # Have to move to CPU and to NumPy for SVM ScikitLearn to work
+                    img_features = [resnet18(img.cuda()).cpu().numpy() for img in imgs]
+                    max_pooled_features = np.max(np.stack(img_features), axis=0)
+                    image_features.append(max_pooled_features)
 
-        point_features = np.concatenate(point_features, axis=0)
-        image_features = np.concatenate(image_features, axis=0)
-        labels = np.concatenate(labels, axis=0)
+                    labels.append(cls_name)
 
-        plot_tsne(point_features, labels, 'Gaussian Cloud feature embeddings',
-                  f'Gaussian Cloud feature embeddings on {args.log_dir}')
-        plot_tsne(image_features, labels, f'Distinct {num_views} views feature embeddings',
-                  f'Distinct {num_views} Views feature embeddings on {args.log_dir}')
+            point_features = np.concatenate(point_features, axis=0)
+            image_features = np.concatenate(image_features, axis=0)
+            labels = np.concatenate(labels, axis=0)
+
+            save_features((point_features, labels), feature_path_point)
+            save_features((image_features, labels), feature_path_image)
 
 
 if __name__ == '__main__':
