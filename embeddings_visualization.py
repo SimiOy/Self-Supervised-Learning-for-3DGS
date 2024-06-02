@@ -1,3 +1,4 @@
+import argparse
 import importlib
 import os
 import sys
@@ -18,12 +19,12 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = BASE_DIR
 sys.path.append(os.path.join(ROOT_DIR, 'models'))
 
-point_dir = 'C:/Gaussian-Splatting/gaussian-splatting/output/modelNet10/'
-img_dir = 'C:/ResearchProject/datasets/modelnet10/ModelNet10_captures'
-log_dir = 'pointnet_plus_only_points'
-batch_size = 32
-num_workers = 8
-num_views = 32
+# point_dir = 'C:/Gaussian-Splatting/gaussian-splatting/output/modelNet10/'
+# img_dir = 'C:/ResearchProject/datasets/modelnet10/ModelNet10_captures'
+# log_dir = 'pointnet_plus_only_points'
+# batch_size = 32
+# num_workers = 8
+# num_views = 32
 
 classes = {
     'bathtub': 0,
@@ -37,6 +38,26 @@ classes = {
     'table': 8,
     'toilet': 9
 }
+
+
+def parse_args():
+    '''PARAMETERS'''
+    parser = argparse.ArgumentParser('training')
+    # Architecture
+    parser.add_argument('--use_cpu', action='store_true', default=False, help='use cpu mode')
+    parser.add_argument('--gpu', type=str, default='0', help='specify gpu device')
+
+    # Model params
+    parser.add_argument('--log_dir', type=str, default=None, help='experiment root')
+    parser.add_argument('--batch_size', type=int, default=32, help='batch size in training')
+    parser.add_argument('--num_workers', type=int, default=8, help='number of data loader workers')
+    parser.add_argument('--num_views', nargs='+', type=int, required=True, help='space-separated number of views')
+
+    # Data Loader Args
+    parser.add_argument('--point_dir', type=str, required=True, help='3D Gaussian Splats Dir')
+    parser.add_argument('--img_dir', type=str, required=True, help='Renders/Images Dir')
+
+    return parser.parse_args()
 
 
 def read_config(log_dir):
@@ -71,48 +92,33 @@ def read_config(log_dir):
     raise FileNotFoundError("No configuration file found in the specified directory.")
 
 
-def plot_tsne(features, labels, title):
+def plot_tsne(features, labels, title, name):
     tsne = TSNE(n_components=2, random_state=42, n_jobs=-1)
     tsne_results = tsne.fit_transform(features)
-
-    # markers = ['o', 's', 'v', '^', '<', '>', 'p', '*', 'H', 'D']
-    colors = plt.cm.tab10(np.linspace(0, 1, len(classes)))
 
     plt.figure(figsize=(10, 10))
     scatter = plt.scatter(tsne_results[:, 0], tsne_results[:, 1], c=[classes[label] for label in labels],
                           cmap='jet', marker='.')
     plt.legend(handles=scatter.legend_elements()[0], labels=classes.keys(), title="Classes")
 
-    # for idx, class_label in enumerate(classes):
-    #     # Filter by class
-    #     indices = [i for i, label in enumerate(labels) if label == class_label]
-    #     plt.scatter(tsne_results[indices, 0], tsne_results[indices, 1], label=class_label,
-    #                 color=colors[idx], marker=markers[idx], s=20)
-    #
-    # plt.legend(title="Classes")
     plt.title(title)
-    plt.show()
+    # plt.show()
+    plt.savefig(f'plots/{name}.png')
+    print(f"Saved {name}", flush=True)
 
 
 def main():
+    args = parse_args()
     os.environ["CUDA_VISIBLE_DEVICES"] = '0'
-    config = read_config(log_dir)
+    config = read_config(args.log_dir)
 
     '''ACCESS LOG DIR'''
     exp_dir = Path('./log/')
-    exp_dir = exp_dir.joinpath(log_dir)
+    exp_dir = exp_dir.joinpath(args.log_dir)
 
     '''DATA LOADING'''
     data_loader_config = Config(config['num_point'], config['use_normals'], config['use_scale_and_rotation'],
                                 config['use_colors'], config['furthest_point_sample'])
-    train_dataset = SupervisedTrainingModelNetDataLoader(point_dir=point_dir, img_dir=img_dir, args=data_loader_config,
-                                                         split='train', num_views=num_views)
-    test_dataset = SupervisedTrainingModelNetDataLoader(point_dir=point_dir, img_dir=img_dir, args=data_loader_config,
-                                                        split='test', num_views=num_views)
-    trainDataLoader = torch.utils.data.DataLoader(train_dataset, batch_size=batch_size, shuffle=True,
-                                                  num_workers=num_workers, drop_last=True)
-    testDataLoader = torch.utils.data.DataLoader(test_dataset, batch_size=batch_size, shuffle=False,
-                                                 num_workers=num_workers)
 
     '''MODEL LOADING'''
     pointnet_model = importlib.import_module(config['model'])
@@ -139,28 +145,44 @@ def main():
     pointnet.eval()
     resnet18.eval()
 
-    point_features, image_features, labels = [], [], []
+    for num_views in args.num_views:
+        print(f"Processing TSNE with num_views = {num_views}", flush=True)
 
-    with torch.no_grad():
-        for batch_id, (points, imgs, cls_name) in tqdm(enumerate(trainDataLoader, 0), total=len(trainDataLoader)):
-            points = points.transpose(2, 1).cuda()
-            fp, _ = pointnet(points)
-            point_features.append(fp.cpu().numpy())
+        train_dataset = SupervisedTrainingModelNetDataLoader(point_dir=args.point_dir, img_dir=args.img_dir,
+                                                             args=data_loader_config, split='train',
+                                                             num_views=num_views)
+        test_dataset = SupervisedTrainingModelNetDataLoader(point_dir=args.point_dir, img_dir=args.img_dir,
+                                                            args=data_loader_config, split='test',
+                                                            num_views=num_views)
+        trainDataLoader = torch.utils.data.DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True,
+                                                      num_workers=args.num_workers, drop_last=True)
+        testDataLoader = torch.utils.data.DataLoader(test_dataset, batch_size=args.batch_size, shuffle=False,
+                                                     num_workers=args.num_workers)
 
-            # Max pooling across the view features
-            # Have to move to CPU and to NumPy for SVM ScikitLearn to work
-            img_features = [resnet18(img.cuda()).cpu().numpy() for img in imgs]
-            max_pooled_features = np.max(np.stack(img_features), axis=0)
-            image_features.append(max_pooled_features)
+        point_features, image_features, labels = [], [], []
 
-            labels.append(cls_name)
+        with torch.no_grad():
+            for batch_id, (points, imgs, cls_name) in tqdm(enumerate(trainDataLoader, 0), total=len(trainDataLoader)):
+                points = points.transpose(2, 1).cuda()
+                fp, _ = pointnet(points)
+                point_features.append(fp.cpu().numpy())
 
-    point_features = np.concatenate(point_features, axis=0)
-    image_features = np.concatenate(image_features, axis=0)
-    labels = np.concatenate(labels, axis=0)
+                # Max pooling across the view features
+                # Have to move to CPU and to NumPy for SVM ScikitLearn to work
+                img_features = [resnet18(img.cuda()).cpu().numpy() for img in imgs]
+                max_pooled_features = np.max(np.stack(img_features), axis=0)
+                image_features.append(max_pooled_features)
 
-    plot_tsne(point_features, labels, 'Gaussian Cloud feature embeddings on train')
-    plot_tsne(image_features, labels, 'Distinct Views feature embeddings on train')
+                labels.append(cls_name)
+
+        point_features = np.concatenate(point_features, axis=0)
+        image_features = np.concatenate(image_features, axis=0)
+        labels = np.concatenate(labels, axis=0)
+
+        plot_tsne(point_features, labels, 'Gaussian Cloud feature embeddings',
+                  f'Gaussian Cloud feature embeddings on {args.log_dir}')
+        plot_tsne(image_features, labels, f'Distinct {num_views} views feature embeddings',
+                  f'Distinct {num_views} Views feature embeddings on {args.log_dir}')
 
 
 if __name__ == '__main__':

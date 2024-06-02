@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 plt.rcParams.update({
     'text.usetex': True,
     'font.family': 'serif',
-    'font.size': 20
+    'font.size': 22
 })
 
 def parse_log_data(log_entries):
@@ -76,6 +76,7 @@ def plot_metrics(epoch_losses, cv_losses, cm_losses, epoch_cm_accuracy, epoch_di
     ax1.set_xlabel('Epochs')
     ax1.set_ylabel('Loss Values')
     ax1.set_title('CV and CM Losses per Epoch')
+    ax1.grid()
     ax1.legend()
 
     # Plotting CM Accuracy
@@ -84,6 +85,7 @@ def plot_metrics(epoch_losses, cv_losses, cm_losses, epoch_cm_accuracy, epoch_di
         ax2.set_xlabel('Epochs')
         # ax2.set_ylabel('CM pretext task')
         ax2.set_title('CM Accuracy per Epoch')
+        ax2.grid()
         ax2.legend()
 
     # Plotting Distance Differences
@@ -92,6 +94,7 @@ def plot_metrics(epoch_losses, cv_losses, cm_losses, epoch_cm_accuracy, epoch_di
         ax3.set_xlabel('Epochs')
         # ax3.set_ylabel('CV pretext task')
         ax3.set_title('CV mPD Differences per Epoch')
+        ax3.grid()
         ax3.legend()
 
     # Customizing x-axis to show epoch numbers only every 5 epochs
