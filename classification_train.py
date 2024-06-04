@@ -59,6 +59,7 @@ def parse_args():
     # Data Loader Args
     parser.add_argument('--point_dir', type=str, required=True, help='3D Gaussian Splats Dir')
     parser.add_argument('--img_dir', type=str, required=True, help='Renders/Images Dir')
+    parser.add_argument('--class_fraction', type=float, default=1, help='percentage of classes considered for training')
 
     return parser.parse_args()
 
@@ -126,6 +127,7 @@ def train_svm(features, labels):
 
 if __name__ == '__main__':
     args = parse_args()
+    print(args, flush=True)
     config = read_config(args.log_dir)
     os.environ["CUDA_VISIBLE_DEVICES"] = '0'
 
@@ -167,7 +169,7 @@ if __name__ == '__main__':
 
         train_dataset = SupervisedTrainingModelNetDataLoader(point_dir=args.point_dir, img_dir=args.img_dir,
                                                              args=data_loader_config, split='train',
-                                                             num_views=num_views)
+                                                             num_views=num_views, class_fraction=args.class_fraction)
         test_dataset = SupervisedTrainingModelNetDataLoader(point_dir=args.point_dir, img_dir=args.img_dir,
                                                             args=data_loader_config, split='test',
                                                             num_views=num_views)

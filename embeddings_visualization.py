@@ -119,7 +119,7 @@ def plot_tsne(features, labels, title, name):
     plt.figure(figsize=(10, 10))
     scatter = plt.scatter(tsne_results[:, 0], tsne_results[:, 1], c=[classes[label] for label in labels],
                           cmap='jet', marker='.')
-    plt.legend(handles=scatter.legend_elements()[0], labels=classes.keys(), title="Classes")
+    plt.legend(handles=scatter.legend_elements()[0], labels=classes.keys(), title="Classes", fontsize=16)
 
     plt.title(title)
     # plt.show()
@@ -173,10 +173,10 @@ def main():
         if args.plot:
             if feature_path_point.exists() and feature_path_image.exists():
                 point_features, labels = load_features(feature_path_point)
-                image_features, _ = load_features(feature_path_image)
-
                 plot_tsne(point_features, labels, 'Gaussian Cloud feature embeddings',
                           f'Gaussian_cloud_feature_embeddings_{args.log_dir}')
+
+                image_features, labels = load_features(feature_path_image)
                 plot_tsne(image_features, labels, f'Distinct {num_views} views feature embeddings',
                           f'Distinct_{num_views}_views_feature_embeddings_{args.log_dir}')
             else:

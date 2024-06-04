@@ -9,11 +9,12 @@ from pyntcloud import PyntCloud
 from torch.utils.data import Dataset
 from torchvision import transforms
 
+from data_loader.ModelNetDataLoader import Config
 from data_loader.dataloader_utils import farthest_point_sample, pc_normalize
 
 
 class SupervisedTrainingModelNetDataLoader(Dataset):
-    def __init__(self, point_dir, img_dir, args, split='train', opacity_threshold=0.3, num_views=1):
+    def __init__(self, point_dir, img_dir, args, split='train', opacity_threshold=0.3, num_views=1, class_fraction=1):
         self.num_points = args.num_point
         self.fps = args.furthest_point_sample
         self.use_normals = args.use_normals
@@ -21,18 +22,30 @@ class SupervisedTrainingModelNetDataLoader(Dataset):
         self.use_sr = args.use_scale_and_rotation
         self.opacity_threshold = opacity_threshold
         self.num_views = num_views
+        self.class_fraction = class_fraction
 
-        # TODO: Use the model_path from the cfg_args of each model instead
         assert split in ['train', 'test']
+        np.random.seed(42)  # to get always the same split
 
         class_paths = [os.path.join(point_dir, class_name) for class_name in os.listdir(point_dir)]
-        self.model_paths = [(os.path.join(cls_path, split, model_name), model_name)
-                            for cls_path in class_paths
-                            for model_name in os.listdir(os.path.join(cls_path, split))]
+        self.model_paths = []
+        self.img_paths = {}
 
-        self.img_paths = {model_name: (os.path.join(img_dir, class_name, split, model_name, 'images'), class_name)
-                          for class_name in os.listdir(img_dir)
-                          for model_name in os.listdir(os.path.join(img_dir, class_name, split))}
+        # fore each class label
+        for class_path in class_paths:
+            class_name = os.path.basename(class_path)
+            models_in_class = os.listdir(os.path.join(class_path, split))
+
+            # compute fraction of models to select
+            num_models_in_class = len(models_in_class)
+            num_models_to_select = int(self.class_fraction * num_models_in_class)
+            selected_models = np.random.choice(models_in_class, size=num_models_to_select, replace=False)
+
+            # add only these
+            for model_name in selected_models:
+                model_path = os.path.join(class_path, split, model_name)
+                self.model_paths.append((model_path, model_name))
+                self.img_paths[model_name] = (os.path.join(img_dir, class_name, split, model_name, 'images'), class_name)
 
         self.transform = transforms.Compose([
             transforms.Resize(size=(224, 224)),
@@ -116,3 +129,12 @@ class SupervisedTrainingModelNetDataLoader(Dataset):
         pcd = o3d.geometry.PointCloud()
         pcd.points = o3d.utility.Vector3dVector(point_cloud[:, 0:3])
         o3d.visualization.draw_geometries([pcd])
+
+
+if __name__ == '__main__':
+    config = Config(num_point=4096, furthest_point_sample=True, use_normals=False)
+    # Usage example:
+    point_dir = 'C:/Gaussian-Splatting/gaussian-splatting/output/modelNet10/'
+    img_dir = 'C:/ResearchProject/datasets/modelnet10/ModelNet10_captures'
+    dataset = SupervisedTrainingModelNetDataLoader(point_dir, img_dir, config)
+    dataset.visualize_point_cloud(515)
