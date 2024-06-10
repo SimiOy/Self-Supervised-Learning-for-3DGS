@@ -55,6 +55,7 @@ def parse_args():
     parser.add_argument('--batch_size', type=int, default=32, help='batch size in training')
     parser.add_argument('--num_workers', type=int, default=8, help='number of data loader workers')
     parser.add_argument('--num_views', nargs='+', type=int, required=True, help='space-separated number of views')
+    parser.add_argument('--novel_views', action='store_true', help='test with novel views')
 
     # Data Loader Args
     parser.add_argument('--point_dir', type=str, required=True, help='3D Gaussian Splats Dir')
@@ -172,7 +173,7 @@ if __name__ == '__main__':
                                                              num_views=num_views, class_fraction=args.class_fraction)
         test_dataset = SupervisedTrainingModelNetDataLoader(point_dir=args.point_dir, img_dir=args.img_dir,
                                                             args=data_loader_config, split='test',
-                                                            num_views=num_views)
+                                                            num_views=num_views, novel_views=args.novel_views)
         trainDataLoader = torch.utils.data.DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True,
                                                       num_workers=args.num_workers, drop_last=True)
         testDataLoader = torch.utils.data.DataLoader(test_dataset, batch_size=args.batch_size, shuffle=False,

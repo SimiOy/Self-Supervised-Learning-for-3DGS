@@ -14,7 +14,8 @@ from data_loader.dataloader_utils import farthest_point_sample, pc_normalize
 
 
 class SupervisedTrainingModelNetDataLoader(Dataset):
-    def __init__(self, point_dir, img_dir, args, split='train', opacity_threshold=0.3, num_views=1, class_fraction=1):
+    def __init__(self, point_dir, img_dir, args, split='train', opacity_threshold=0.3, num_views=1, class_fraction=1,
+                 novel_views=False):
         self.num_points = args.num_point
         self.fps = args.furthest_point_sample
         self.use_normals = args.use_normals
@@ -23,6 +24,7 @@ class SupervisedTrainingModelNetDataLoader(Dataset):
         self.opacity_threshold = opacity_threshold
         self.num_views = num_views
         self.class_fraction = class_fraction
+        self.novel_views = novel_views
 
         assert split in ['train', 'test']
         np.random.seed(42)  # to get always the same split
@@ -45,7 +47,12 @@ class SupervisedTrainingModelNetDataLoader(Dataset):
             for model_name in selected_models:
                 model_path = os.path.join(class_path, split, model_name)
                 self.model_paths.append((model_path, model_name))
-                self.img_paths[model_name] = (os.path.join(img_dir, class_name, split, model_name, 'images'), class_name)
+
+                # grab the images from the point_dir reconstruction folder
+                if split == 'test' and novel_views:
+                    self.img_paths[model_name] = (os.path.join(model_path, 'train', 'ours_15000'), class_name)
+                else:
+                    self.img_paths[model_name] = (os.path.join(img_dir, class_name, split, model_name, 'images'), class_name)
 
         self.transform = transforms.Compose([
             transforms.Resize(size=(224, 224)),
@@ -97,8 +104,13 @@ class SupervisedTrainingModelNetDataLoader(Dataset):
         # Load images
         img_dir, cls_name = self.img_paths[model_name]
         img_indices = np.random.choice(64, self.num_views, replace=False)
-        imgs = [self.transform(Image.open(os.path.join(img_dir, f'{idx:03}.png')).convert('RGB')) for idx in
-                img_indices]
+        if self.novel_views:
+            # padded with 5 zeros by default
+            imgs = [self.transform(Image.open(os.path.join(img_dir, f'{idx:05}.png')).convert('RGB')) for idx in
+                    img_indices]
+        else:
+            imgs = [self.transform(Image.open(os.path.join(img_dir, f'{idx:03}.png')).convert('RGB')) for idx in
+                    img_indices]
 
         return sampled_properties, imgs, cls_name
 
