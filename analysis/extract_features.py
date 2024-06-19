@@ -27,29 +27,29 @@ def _get_latest_point_cloud_path(model_path):
 
 
 def retrieve_all_features(save_dir, model_paths):
-    all_features = []
-    for idx, (model_path, label) in enumerate(model_paths):
+    all_features_df = pd.DataFrame()
+    for idx, (model_path, model_name, label) in enumerate(model_paths):
         point_cloud_path = _get_latest_point_cloud_path(model_path)
         point_cloud = PyntCloud.from_file(point_cloud_path)
 
         features_df = pd.DataFrame()
 
-        features_df['x'], features_df['y'], features_df['z'] = point_cloud.points[['x', 'y', 'z']].values.T
-        features_df[['nx', 'ny', 'nz']] = point_cloud.points[['nx', 'ny', 'nz']].values
+        # features_df['x'], features_df['y'], features_df['z'] = point_cloud.points[['x', 'y', 'z']].values.T
+        # features_df[['nx', 'ny', 'nz']] = point_cloud.points[['nx', 'ny', 'nz']].values
         features_df['opacity'] = point_cloud.points['opacity'].values
-        features_df[['scale_0', 'scale_1', 'scale_2']] = point_cloud.points[['scale_0', 'scale_1', 'scale_2']].values
-        features_df[['rot_0', 'rot_1', 'rot_2', 'rot_3']] = point_cloud.points[
-            ['rot_0', 'rot_1', 'rot_2', 'rot_3']].values
+        # features_df[['scale_0', 'scale_1', 'scale_2']] = point_cloud.points[['scale_0', 'scale_1', 'scale_2']].values
+        # features_df[['rot_0', 'rot_1', 'rot_2', 'rot_3']] = point_cloud.points[
+        #     ['rot_0', 'rot_1', 'rot_2', 'rot_3']].values
 
-        for i in range(44):
-            features_df[f'f_rest_{i}'] = point_cloud.points[f'f_rest_{i}'].values
+        # for i in range(44):
+        #     features_df[f'f_rest_{i}'] = point_cloud.points[f'f_rest_{i}'].values
 
+        features_df['name'] = model_name
         features_df['label'] = label
-        all_features.append(features_df)
+        all_features_df = pd.concat([all_features_df, features_df], ignore_index=True)
 
-    combined_df = pd.concat(all_features, ignore_index=True)
-    combined_df.to_csv(save_dir, index=False)
-    print("Features saved to model_features.csv")
+    all_features_df.to_csv(save_dir, index=False)
+    print("Features saved to:", save_dir)
 
 
 def load_features_from_csv():
@@ -57,18 +57,6 @@ def load_features_from_csv():
     return df
 
 
-classes = {
-    'bathtub': 0,
-    # 'bed': 1,
-    # 'chair': 2,
-    # 'desk': 3,
-    # 'dresser': 4,
-    # 'monitor': 5,
-    # 'night_stand': 6,
-    # 'sofa': 7,
-    # 'table': 8,
-    # 'toilet': 9
-}
 root_dir = 'C:/Gaussian-Splatting/gaussian-splatting/output/modelNet10/'
 save_dir = 'C:/ResearchProject/CV3dgs/model_features.csv'
 
@@ -80,7 +68,7 @@ if __name__ == '__main__':
             split_path = os.path.join(cls_path, split)
             for model_name in os.listdir(split_path):
                 full_path = os.path.join(split_path, model_name)
-                model_paths.append((full_path, label))
+                model_paths.append((full_path, model_name, label))
 
     retrieve_all_features(save_dir, model_paths)
     features_df = load_features_from_csv()
