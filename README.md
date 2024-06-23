@@ -31,7 +31,7 @@ The embeddings of the different modalities are then concatanated and used by the
 (_F_f_) that jointly optimizes all three sub-networks for predicting whether the two
 cross-modal inputs belong to the same object (_i.e._ cross-modality correspondence, green arrow).
 
-[//]: # (![Architecture Overview]&#40;assets/SSL_Network_Architecture.png&#41;)
+![Architecture Overview](assets/SSL_Network_Architecture.png)
 
 ## Installation
 
