@@ -1,0 +1,24 @@
+Epoch 1 (1/100):
+  0%|          | 0/124 [00:00<?, ?it/s]  0%|          | 0/124 [05:06<?, ?it/s]
+Traceback (most recent call last):
+  File "train_model.py", line 269, in <module>
+    main(args)
+  File "train_model.py", line 195, in main
+    fp, _ = pointnet(points)
+  File "/home/asimionescu/.conda/envs/CV3dgs/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/scratch/asimionescu/Self-Supervised-Learning-for-3DGS/models/pointnet2_cls_msg.py", line 37, in forward
+    l1_xyz, l1_points = self.sa1(xyz, norm)
+  File "/home/asimionescu/.conda/envs/CV3dgs/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/scratch/asimionescu/Self-Supervised-Learning-for-3DGS/models/pointnet2_utils.py", line 260, in forward
+    grouped_points = F.relu(bn(conv(grouped_points)))
+  File "/home/asimionescu/.conda/envs/CV3dgs/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/asimionescu/.conda/envs/CV3dgs/lib/python3.7/site-packages/torch/nn/modules/conv.py", line 457, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/asimionescu/.conda/envs/CV3dgs/lib/python3.7/site-packages/torch/nn/modules/conv.py", line 454, in _conv_forward
+    self.padding, self.dilation, self.groups)
+RuntimeError: Given groups=1, weight of size [32, 6, 1, 1], expected input[32, 3, 16, 512] to have 6 channels, but got 3 channels instead
+srun: error: gpu006: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=3734110.0

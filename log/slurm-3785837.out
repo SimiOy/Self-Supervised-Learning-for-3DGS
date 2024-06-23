@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "train_model.py", line 271, in <module>
+    main(args)
+  File "train_model.py", line 251, in main
+    'epoch': epoch + 1,
+UnboundLocalError: local variable 'epoch' referenced before assignment
+srun: error: gpu007: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=3785837.0

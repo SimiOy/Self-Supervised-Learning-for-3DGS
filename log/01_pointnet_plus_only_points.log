@@ -1,0 +1,17 @@
+Namespace(batch_size=32, class_fraction=0.1, gpu='0', img_dir='/scratch/asimionescu/RP_datasets/ModelNet10_captures', log_dir='pointnet_plus_only_points', num_views=[1, 4, 32, 64], num_workers=16, point_dir='/scratch/asimionescu/gaussian-splatting/output', use_cpu=False)
+Processing with num_views = 1
+Results for num_views = 1
+Point-based SVM Accuracy: 0.8843612334801763
+Image-based SVM Accuracy: 0.8259911894273128
+Processing with num_views = 4
+Results for num_views = 4
+Point-based SVM Accuracy: 0.8744493392070485
+Image-based SVM Accuracy: 0.9129955947136564
+Processing with num_views = 32
+Results for num_views = 32
+Point-based SVM Accuracy: 0.8887665198237885
+Image-based SVM Accuracy: 0.9162995594713657
+Processing with num_views = 64
+Results for num_views = 64
+Point-based SVM Accuracy: 0.8909691629955947
+Image-based SVM Accuracy: 0.9251101321585903

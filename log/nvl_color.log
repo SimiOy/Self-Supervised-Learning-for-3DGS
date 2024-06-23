@@ -1,0 +1,5 @@
+Namespace(batch_size=32, class_fraction=1.0, gpu='0', img_dir='/scratch/asimionescu/RP_datasets/ModelNet10_captures', log_dir='color', novel_views=True, num_views=[64], num_workers=16, point_dir='/scratch/asimionescu/gaussian-splatting/output', use_cpu=False)
+Processing with num_views = 64
+Results for num_views = 64
+Point-based SVM Accuracy: 0.8766519823788547
+Image-based SVM Accuracy: 0.9625550660792952
